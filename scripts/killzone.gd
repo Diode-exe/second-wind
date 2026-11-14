@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
+# this length of traversal, i dont like it 
 @onready var player_node: Node2D = $"../../../../Player"
 @onready var game: Node2D = $".."
 @onready var white: Sprite2D = $"../white"
