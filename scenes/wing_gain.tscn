@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://c3hi6cqqpswoe"]
+
+[ext_resource type="Texture2D" uid="uid://d2jlvm00w7wyi" path="res://assets/sprites/knight.png" id="1_8j2xt"]
+[ext_resource type="Texture2D" uid="uid://b6sa12c4qigsa" path="res://assets/sprites/feather.png" id="2_fhjb7"]
+
+[sub_resource type="Animation" id="Animation_8j2xt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../left_wing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31.999989, -25.999994)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(26, -26)]
+}
+
+[sub_resource type="Animation" id="Animation_fhjb7"]
+resource_name = "left_wing_attach"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../left_wing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-31.999989, -25.999994), Vector2(-12, -7)]
+}
+
+[sub_resource type="Animation" id="Animation_43v2a"]
+resource_name = "right_wing_attach"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(26, -26), Vector2(12, -7.0000005)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43v2a"]
+_data = {
+&"RESET": SubResource("Animation_8j2xt"),
+&"left_wing_attach": SubResource("Animation_fhjb7"),
+&"right_wing_attach": SubResource("Animation_43v2a")
+}
+
+[node name="wing_gain" type="Node2D" unique_id=1746863379]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=933660122]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
+texture = ExtResource("1_8j2xt")
+region_enabled = true
+region_rect = Rect2(63, 4, 35, 32)
+
+[node name="left_wing" type="Sprite2D" parent="Player" unique_id=366755285]
+position = Vector2(-31.999989, -25.999994)
+scale = Vector2(0.103, 0.102)
+texture = ExtResource("2_fhjb7")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 44, 175, 179)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/left_wing" unique_id=2063219015]
+root_node = NodePath("../../right_wing/AnimationPlayer")
+libraries/ = SubResource("AnimationLibrary_43v2a")
+
+[node name="right_wing" type="Sprite2D" parent="Player" unique_id=779351430]
+position = Vector2(26, -26)
+scale = Vector2(0.10285715, 0.10055866)
+texture = ExtResource("2_fhjb7")
+region_enabled = true
+region_rect = Rect2(44, 44, 175, 179)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/right_wing" unique_id=2010929872]
