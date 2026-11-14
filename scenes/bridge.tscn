@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://581awekhncm6"]
+
+[ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="1_7ct4w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uexfq"]
+size = Vector2(48, 10)
+
+[node name="Bridge" type="Area2D" unique_id=930095090]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135248854]
+shape = SubResource("RectangleShape2D_uexfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094279541]
+texture = ExtResource("1_7ct4w")
+region_enabled = true
+region_rect = Rect2(144, 0, 48, 9)
