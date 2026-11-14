@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://k5f4acltfib6" path="res://scenes/slime.tscn" id="6_p57ef"]
 [ext_resource type="Texture2D" uid="uid://fqxtsn02lucp" path="res://assets/sprites/slime_purple.png" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://581awekhncm6" path="res://scenes/bridge.tscn" id="7_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://rtye4i1u2uwe" path="res://assets/sprites/white.png" id="9_0tnpc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -439,5 +440,12 @@ libraries/ = SubResource("AnimationLibrary_vtaks")
 position = Vector2(0, 1.5483837)
 scale = Vector2(1, 0.9999999)
 shape = SubResource("RectangleShape2D_uexfq")
+
+[node name="white" type="Sprite2D" parent="." unique_id=290261382]
+visible = false
+z_index = 3
+position = Vector2(371, -13.75)
+scale = Vector2(6.5353537, 2.271242)
+texture = ExtResource("9_0tnpc")
 
 [connection signal="area_entered" from="spawn_big_area" to="Player" method="_on_spawn_big_area_area_entered"]

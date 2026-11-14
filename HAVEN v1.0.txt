@@ -1,0 +1,85 @@
+Team Members: Hamza Wali & Rohan Bulmer
+
+Team Name: Local Host
+
+Game Name: Second Wind
+
+Start:
+
+Player starts by playing very difficult game where they are bound to die. (could be replaced with a cutscence)
+
+Once they die, a cutscene plays; they grow a pair of angel wings, and start to fly. Here, the actual game begins.
+
+To stay alive, these wings need to be maintained with Photon Feathers. Flying throughout the game detoriates the player's wings.
+
+The player needs to collect Photon Feathers to survive. If they cannot maintain their wings, they will fall to their doom. Photon Feathers can be found throughout gameplay, by NPCs, in chests/loot boxes, and level completion rewards.
+
+Birds such as hawks and condors may attack the player. Defeating them will make them drop Avian Feathers, which can be used to repair your wings (though they are not as effective). If they land attacks on you, your wings will detoriate faster.
+
+Some obstacles may also appear, such as "stiff clouds", lightning, or meteors.
+
+At the end of levels, you can choose to use your feathers to repair your wings. Or, you can use them to upgrade certain stats;
+
+- Wing Health/Fortification
+- Flight Speed
+- Ability Upgrades
+
+The player can have certain abilities. These may be used to defend against the birds, or to fly faster.
+
+Some ideas include:
+
+- Wind/Air attacks
+- Blinding Divine Light
+- Photonic Particle Phase (phase through objects and enemies briefly)
+- Speed of Light (Wings gain superspeed for a short amount of time)
+- Protection Shield (Allows the player to crash into an object/bird and come out unscathed)
+- Ball of Fire (Same as Protection Shield, but this ability destroys the object/bird it comes in contact with)
+
+End Goal: Reach a location called the Remnants of Resurrection. When the player is there, they can claim a relic called the Ring of Rebirth. Once activated, the wings wrap around the player, and the halo turns into a crown. The player now turns into a Monarch in white clothes with a gold crown. The game has been won. A cutscence can play where the player is having a palace or kingdom built under them.
+
+Add credits scene. For example:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Game developed by Rohan Bulmer
+
+Story written by Hamza Wali
+
+Assets designed by: [INSERT_ASSET_DESIGNERS]
+
+Music by [INSERT_SOUNDTRACK_DESIGNERS]
+
+Sound effects by [INSERT_SOUNDEFFECT_DESIGNERS]
+
+Made for Hackclub Haven Winnipeg
+
+THE END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Additional Features:
+
+- Intro cutscene
+- Soundtracks and Sound effects
+- Easter Egg where flying too close to the sun can melt your wings off
+- Air/Wind attacks to defend from enemies
+- Enemies including predatory birds
+- Different/Randomized Weather
+- Lightning and Rain Obstacles
+- Dialogues and NPCs
+
+IGNORE THIS; STILL DECIDING WHAT TO DO WITH IT --> [Abilities: Phoenix, Nine-tails, Dragon, etc. (Animals associated with Rebirth)]
+
+Assets:
+
+- Character (Regular and Angel)
+- Feather (Preferably Blue, Yellow, or White)
+- Clouds
+- Clear/Cloudy Sky Backdrop
+- Angel Wings (Maybe with animation?)
+- Flying Condors/Eagles/Hawks (Enemies)
+- Soundtracks and soundeffects
+- Animated Sun
+- Grassy Ground
+- Caves and Spikes?
+- Monsters
+- Powerful Ring
+- Ruins of a monument/temple/kingdom
