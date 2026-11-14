@@ -11,11 +11,20 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var killzone: Area2D = $"../Sprite2D/Killzone"
 @onready var player: CharacterBody2D = $"."
+@onready var player_sprite: AnimatedSprite2D = $"./AnimatedSprite2D"
+
 @onready var wing_gain: Node2D = $"../wing_gain"
 @onready var wing_gain_sprite: Sprite2D = $"../wing_gain/Player"
+@onready var wing_with_sprite: Sprite2D = $"../wing_with/Player"
+
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+
+var has_wings = false
+
+@export var wing_with_sprite_dupe = false
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -34,11 +43,17 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-		
-		if direction < 0:
-			animated_sprite_2d.flip_h = true
+		if !has_wings:
+			if direction < 0:
+				animated_sprite_2d.flip_h = true
+			else:
+				animated_sprite_2d.flip_h = false
 		else:
-			animated_sprite_2d.flip_h = false
+			if direction < 0:
+				wing_with_sprite_dupe.flip_h = true
+			else:
+				wing_with_sprite_dupe.flip_h = false
+			
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -64,16 +79,29 @@ func _on_spawn_big_area_area_entered(area: Area2D) -> void:
 	big_slime_animation.play("move_down")
 
 func attach_wings():
-	wing_gain_sprite.global_position = animated_sprite_2d.global_position
-	player.visible = false
-	player.process_mode = Node.PROCESS_MODE_DISABLED
-	wing_gain.visible = true
-	left_wing_animation.play("left_wing_attach")
-	await left_wing_animation.animation_finished
-	right_wing_animation.play("right_wing_attach")
-	await right_wing_animation.animation_finished
-	
-	player.visible = true
-	player.process_mode = Node.PROCESS_MODE_INHERIT
-	
-	#white.visible = true
+	if !has_wings:
+		wing_gain_sprite.global_position = animated_sprite_2d.global_position
+		player.visible = false
+		player.process_mode = Node.PROCESS_MODE_DISABLED
+		wing_gain.visible = true
+		left_wing_animation.play("left_wing_attach")
+		await left_wing_animation.animation_finished
+		right_wing_animation.play("right_wing_attach")
+		await right_wing_animation.animation_finished
+		
+		wing_gain.visible = false
+	#	
+		player_sprite.queue_free()
+		
+		wing_with_sprite_dupe = wing_with_sprite.duplicate()
+		
+		wing_with_sprite.queue_free()
+		
+		player.add_child(wing_with_sprite_dupe)
+#		
+		player.process_mode = Node.PROCESS_MODE_INHERIT
+		
+		player.visible = true
+		
+		#white.visible = true
+		has_wings = true

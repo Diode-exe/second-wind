@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://581awekhncm6" path="res://scenes/bridge.tscn" id="7_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://rtye4i1u2uwe" path="res://assets/sprites/white.png" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://c3hi6cqqpswoe" path="res://scenes/wing_gain.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://ct0oimtwl5l3n" path="res://scenes/wing_with.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -452,5 +453,8 @@ texture = ExtResource("9_0tnpc")
 [node name="wing_gain" parent="." unique_id=1746863379 instance=ExtResource("10_vtaks")]
 visible = false
 z_index = 5
+
+[node name="wing_with" parent="." unique_id=78275759 instance=ExtResource("11_kvpfn")]
+visible = false
 
 [connection signal="area_entered" from="spawn_big_area" to="Player" method="_on_spawn_big_area_area_entered"]

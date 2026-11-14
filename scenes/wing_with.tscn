@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ct0oimtwl5l3n"]
+
+[ext_resource type="Script" uid="uid://begr6nq1pcyme" path="res://scenes/wing_gain.gd" id="1_c7trj"]
+[ext_resource type="Texture2D" uid="uid://d2jlvm00w7wyi" path="res://assets/sprites/knight.png" id="2_a44mq"]
+[ext_resource type="Texture2D" uid="uid://b6sa12c4qigsa" path="res://assets/sprites/feather.png" id="3_usruo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c7trj"]
+radius = 5.0
+
+[node name="wing_with" type="CharacterBody2D" unique_id=78275759]
+collision_layer = 2
+script = ExtResource("1_c7trj")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=933660122]
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
+position = Vector2(26, -26)
+texture = ExtResource("2_a44mq")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="right_wing" type="Sprite2D" parent="Player" unique_id=1806637040]
+position = Vector2(12, -7)
+scale = Vector2(0.103, 0.103)
+texture = ExtResource("3_usruo")
+region_enabled = true
+region_rect = Rect2(44, 44, 175, 179)
+
+[node name="left_wing" type="Sprite2D" parent="Player" unique_id=366755285]
+position = Vector2(-12, -7)
+scale = Vector2(0.103, 0.102)
+texture = ExtResource("3_usruo")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(44, 44, 175, 179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1836364472]
+position = Vector2(26, -19)
+shape = SubResource("CircleShape2D_c7trj")
