@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uexfq"]
 size = Vector2(48, 10)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=479938406]
+[node name="Bridge" type="StaticBody2D" unique_id=479938406]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778579925]
 shape = SubResource("RectangleShape2D_uexfq")

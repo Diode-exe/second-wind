@@ -346,5 +346,5 @@ position = Vector2(-24, 28)
 
 [node name="Bridges" type="Node" parent="." unique_id=1890362818]
 
-[node name="StaticBody2D" parent="Bridges" unique_id=479938406 instance=ExtResource("7_u5sy4")]
+[node name="Bridge" parent="Bridges" unique_id=479938406 instance=ExtResource("7_u5sy4")]
 position = Vector2(11, 45)
