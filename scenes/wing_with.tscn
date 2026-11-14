@@ -14,7 +14,7 @@ script = ExtResource("1_c7trj")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=933660122]
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
-position = Vector2(26, -26)
+position = Vector2(1, -16)
 texture = ExtResource("2_a44mq")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
@@ -35,5 +35,5 @@ region_enabled = true
 region_rect = Rect2(44, 44, 175, 179)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1836364472]
-position = Vector2(26, -19)
+position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_c7trj")
