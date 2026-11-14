@@ -10,6 +10,8 @@ extends CharacterBody2D
 @onready var white: Sprite2D = $"../white"
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var killzone: Area2D = $"../Sprite2D/Killzone"
+@onready var player: CharacterBody2D = $"."
+@onready var wing_gain: Node2D = $"../wing_gain"
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -61,6 +63,10 @@ func _on_spawn_big_area_area_entered(area: Area2D) -> void:
 	big_slime_animation.play("move_down")
 
 func attach_wings():
+	wing_gain.position = player.position
+	wing_gain.visible = true
 	left_wing_animation.play("left_wing_attach")
+	left_wing_animation.queue("right_wing_attach")
 	right_wing_animation.play("right_wing_attach")
-	white.visible = true
+	
+	#white.visible = true

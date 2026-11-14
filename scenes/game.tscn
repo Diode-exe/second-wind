@@ -451,5 +451,6 @@ texture = ExtResource("9_0tnpc")
 
 [node name="wing_gain" parent="." unique_id=1746863379 instance=ExtResource("10_vtaks")]
 visible = false
+z_index = 5
 
 [connection signal="area_entered" from="spawn_big_area" to="Player" method="_on_spawn_big_area_area_entered"]
