@@ -65,6 +65,8 @@ func _on_spawn_big_area_area_entered(area: Area2D) -> void:
 
 func attach_wings():
 	wing_gain_sprite.global_position = animated_sprite_2d.global_position
+	player.visible = false
+	player.process_mode = Node.PROCESS_MODE_DISABLED
 	wing_gain.visible = true
 	left_wing_animation.play("left_wing_attach")
 	left_wing_animation.queue("right_wing_attach")
