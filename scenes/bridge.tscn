@@ -5,13 +5,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uexfq"]
 size = Vector2(48, 10)
 
-[node name="Bridge" type="Area2D" unique_id=930095090]
-collision_layer = 2
+[node name="StaticBody2D" type="StaticBody2D" unique_id=479938406]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1135248854]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=778579925]
 shape = SubResource("RectangleShape2D_uexfq")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2094279541]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1931344452]
 texture = ExtResource("1_7ct4w")
 region_enabled = true
 region_rect = Rect2(144, 0, 48, 9)
