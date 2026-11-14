@@ -3,7 +3,10 @@ extends CharacterBody2D
 
 @onready var bridge: StaticBody2D = $"../Bridges/Bridge"
 @onready var bridge_collider: CollisionShape2D = $"../Bridges/Bridge/CollisionShape2D"
+@onready var big_slime: Node2D = $"../Slimes/big_slime"
+@onready var big_slime_animation: AnimationPlayer = $"../Sprite2D/AnimationPlayer"
 
+#@onready var big_slime_animation: AnimationPlayer = $"../Slimes/big_slime/Sprite2D/AnimationPlayer"
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 130.0
@@ -50,3 +53,7 @@ func drop_down_bridge():
 					print("Dropping down through the bridge")
 					bridge_collider.disabled = true
 					print(bridge_collider.disabled)
+
+
+func _on_spawn_big_area_area_entered(area: Area2D) -> void:
+	big_slime_animation.play("move_down")
