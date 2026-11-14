@@ -77,7 +77,7 @@ script = SubResource("GDScript_8j2xt")
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
 texture = ExtResource("1_8j2xt")
 region_enabled = true
-region_rect = Rect2(63, 4, 35, 32)
+region_rect = Rect2(64, 0, 32, 32)
 
 [node name="left_wing" type="Sprite2D" parent="Player" unique_id=366755285]
 position = Vector2(-31.999989, -25.999994)
