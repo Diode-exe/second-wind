@@ -75,9 +75,21 @@ script = SubResource("GDScript_8j2xt")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=933660122]
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
+position = Vector2(26, -26)
 texture = ExtResource("1_8j2xt")
 region_enabled = true
 region_rect = Rect2(64, 0, 32, 32)
+
+[node name="right_wing" type="Sprite2D" parent="Player" unique_id=1806637040]
+position = Vector2(26, -26)
+scale = Vector2(0.103, 0.103)
+texture = ExtResource("2_fhjb7")
+region_enabled = true
+region_rect = Rect2(44, 44, 175, 179)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/right_wing" unique_id=1538512938]
+root_node = NodePath(".")
+libraries/ = SubResource("AnimationLibrary_43v2a")
 
 [node name="left_wing" type="Sprite2D" parent="Player" unique_id=366755285]
 position = Vector2(-31.999989, -25.999994)
@@ -90,12 +102,3 @@ region_rect = Rect2(44, 44, 175, 179)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player/left_wing" unique_id=2063219015]
 root_node = NodePath("../../right_wing/AnimationPlayer")
 libraries/ = SubResource("AnimationLibrary_43v2a")
-
-[node name="right_wing" type="Sprite2D" parent="Player" unique_id=779351430]
-position = Vector2(26, -26)
-scale = Vector2(0.10285715, 0.10055866)
-texture = ExtResource("2_fhjb7")
-region_enabled = true
-region_rect = Rect2(44, 44, 175, 179)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/right_wing" unique_id=2010929872]

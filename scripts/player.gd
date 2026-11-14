@@ -69,7 +69,11 @@ func attach_wings():
 	player.process_mode = Node.PROCESS_MODE_DISABLED
 	wing_gain.visible = true
 	left_wing_animation.play("left_wing_attach")
-	left_wing_animation.queue("right_wing_attach")
+	await left_wing_animation.animation_finished
 	right_wing_animation.play("right_wing_attach")
+	await right_wing_animation.animation_finished
+	
+	player.visible = true
+	player.process_mode = Node.PROCESS_MODE_INHERIT
 	
 	#white.visible = true
