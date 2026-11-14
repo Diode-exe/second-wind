@@ -5,9 +5,11 @@ extends CharacterBody2D
 @onready var bridge_collider: CollisionShape2D = $"../Bridges/Bridge/CollisionShape2D"
 @onready var big_slime: Node2D = $"../Slimes/big_slime"
 @onready var big_slime_animation: AnimationPlayer = $"../Sprite2D/AnimationPlayer"
-
-#@onready var big_slime_animation: AnimationPlayer = $"../Slimes/big_slime/Sprite2D/AnimationPlayer"
+@onready var left_wing_animation: AnimationPlayer = $"Player/left_wing/AnimationPlayer"
+@onready var right_wing_animation: AnimationPlayer = $"Player/right_wing/AnimationPlayer"
+@onready var white: Sprite2D = $white
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var killzone: Area2D = $"../Sprite2D/Killzone"
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
@@ -57,3 +59,8 @@ func drop_down_bridge():
 
 func _on_spawn_big_area_area_entered(area: Area2D) -> void:
 	big_slime_animation.play("move_down")
+
+func attach_wings():
+	left_wing_animation.play("left_wing_attach")
+	right_wing_animation.play("right_wing_attach")
+	white.visible = true
