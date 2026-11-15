@@ -365,42 +365,6 @@ position = Vector2(40, -29)
 [node name="Platform2" parent="Platforms" unique_id=1385382579 instance=ExtResource("3_lnu2h")]
 position = Vector2(161, 26)
 
-[node name="Slime14" parent="Platforms/Platform2" unique_id=1765242972 instance=ExtResource("6_p57ef")]
-position = Vector2(7, -17)
-
-[node name="Slime18" parent="Platforms/Platform2" unique_id=15325478 instance=ExtResource("6_p57ef")]
-position = Vector2(138, -30)
-
-[node name="Slime22" parent="Platforms/Platform2" unique_id=1588599250 instance=ExtResource("6_p57ef")]
-position = Vector2(107, -30)
-
-[node name="Slime19" parent="Platforms/Platform2" unique_id=399162478 instance=ExtResource("6_p57ef")]
-position = Vector2(184, -45)
-
-[node name="Slime20" parent="Platforms/Platform2" unique_id=648691495 instance=ExtResource("6_p57ef")]
-position = Vector2(168, -45)
-
-[node name="Slime21" parent="Platforms/Platform2" unique_id=2038478298 instance=ExtResource("6_p57ef")]
-position = Vector2(154, -46)
-
-[node name="Slime23" parent="Platforms/Platform2" unique_id=223133764 instance=ExtResource("6_p57ef")]
-position = Vector2(170, -123)
-
-[node name="Slime24" parent="Platforms/Platform2" unique_id=1706111325 instance=ExtResource("6_p57ef")]
-position = Vector2(170, -109)
-
-[node name="Slime25" parent="Platforms/Platform2" unique_id=1601069117 instance=ExtResource("6_p57ef")]
-position = Vector2(170, -96)
-
-[node name="Slime15" parent="Platforms/Platform2" unique_id=1320569178 instance=ExtResource("6_p57ef")]
-position = Vector2(-277, 19)
-
-[node name="Slime16" parent="Platforms/Platform2" unique_id=1490896696 instance=ExtResource("6_p57ef")]
-position = Vector2(-263, 19)
-
-[node name="Slime17" parent="Platforms/Platform2" unique_id=711950654 instance=ExtResource("6_p57ef")]
-position = Vector2(-247, 19)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2" unique_id=1919421898]
 libraries/ = SubResource("AnimationLibrary_iywne")
 autoplay = &"move"
@@ -448,6 +412,42 @@ position = Vector2(81, 45)
 
 [node name="Slime13" parent="Slimes" unique_id=1254699505 instance=ExtResource("6_p57ef")]
 position = Vector2(-24, 28)
+
+[node name="Slime15" parent="Slimes" unique_id=1765242972 instance=ExtResource("6_p57ef")]
+position = Vector2(168, 9)
+
+[node name="Slime18" parent="Slimes" unique_id=15325478 instance=ExtResource("6_p57ef")]
+position = Vector2(299, -4)
+
+[node name="Slime22" parent="Slimes" unique_id=1588599250 instance=ExtResource("6_p57ef")]
+position = Vector2(268, -4)
+
+[node name="Slime19" parent="Slimes" unique_id=399162478 instance=ExtResource("6_p57ef")]
+position = Vector2(345, -19)
+
+[node name="Slime20" parent="Slimes" unique_id=648691495 instance=ExtResource("6_p57ef")]
+position = Vector2(329, -19)
+
+[node name="Slime21" parent="Slimes" unique_id=2038478298 instance=ExtResource("6_p57ef")]
+position = Vector2(315, -20)
+
+[node name="Slime23" parent="Slimes" unique_id=223133764 instance=ExtResource("6_p57ef")]
+position = Vector2(331, -97)
+
+[node name="Slime24" parent="Slimes" unique_id=1706111325 instance=ExtResource("6_p57ef")]
+position = Vector2(331, -83)
+
+[node name="Slime25" parent="Slimes" unique_id=1601069117 instance=ExtResource("6_p57ef")]
+position = Vector2(331, -70)
+
+[node name="Slime16" parent="Slimes" unique_id=1320569178 instance=ExtResource("6_p57ef")]
+position = Vector2(-116, 45)
+
+[node name="Slime17" parent="Slimes" unique_id=1490896696 instance=ExtResource("6_p57ef")]
+position = Vector2(-102, 45)
+
+[node name="Slime26" parent="Slimes" unique_id=711950654 instance=ExtResource("6_p57ef")]
+position = Vector2(-86, 45)
 
 [node name="Bridges" type="Node" parent="." unique_id=1890362818]
 
