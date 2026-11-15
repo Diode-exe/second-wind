@@ -77,7 +77,7 @@ func drop_down_bridge():
 					print(bridge_collider.disabled)
 
 
-func _on_spawn_big_area_area_entered(area: Area2D) -> void:
+func _on_spawn_big_area_area_entered(_area: Area2D) -> void:
 	big_slime_animation.play("move_down")
 
 func attach_wings():
@@ -104,6 +104,7 @@ func attach_wings():
 	wing_with_sprite.queue_free()
 
 	player.add_child(wing_with_sprite_dupe)
+	
 
 	# wing_with_sprite_dupe.flip_h = animated_sprite_2d.flip_h
 #
@@ -112,6 +113,7 @@ func attach_wings():
 	player.visible = true
 
 	white.visible = true
+	white.global_position = animated_sprite_2d.global_position
 	white_animation.play("enlarge")
 	await white_animation.animation_finished
 	

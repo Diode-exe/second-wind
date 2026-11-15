@@ -9,7 +9,7 @@ extends Area2D
 
 var has_wings = false
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	if !has_wings:
 		print("You died!")
 		timer.start()
