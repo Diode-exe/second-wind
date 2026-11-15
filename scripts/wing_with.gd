@@ -12,9 +12,11 @@ const SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
 var camera_zoom = Vector2(2, 2)
-@export var wing_health = 10 
+@export var wing_health = 10
 @export var health_init = false
- 
+
+var engulfing = false
+
 func init_wing_health():
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
@@ -31,16 +33,16 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
-	
+
 	if Input.is_action_just_pressed("space"):
 		if is_on_floor():
 			update_wings()
 		else:
 			update_wings(4)
-	
+
 	if Input.is_action_just_pressed("reset"):
 		reload_scene()
-		
+
 	if Input.is_action_just_pressed("t_key"):
 		wing_health = 1000000
 
@@ -57,13 +59,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
+
 	# Loop through every collision from this frame
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		var normal = collision.get_normal()
-		
+
 		if collider.scene_file_path == "res://scenes/question_box.tscn":
 			#print("touched question box")
 			if collider.has_meta("is_empty"):
@@ -78,12 +80,10 @@ func _physics_process(delta: float) -> void:
 			else:
 				pass
 				#print("this box has no metadata")
-					
-					
-	
+
 func reload_scene():
 	get_tree().reload_current_scene()
-#	
+#
 func add_wing_health(random = false):
 	if wing_health == null:
 		wing_health = 10
@@ -120,6 +120,13 @@ func update_wings(subtract = 1):
 	rich_text_label.append_text(str(wing_health))
 
 func engulf_black():
+	if engulfing:
+		return
+	engulfing = true
 	black.visible = true
+	animation_player.stop()
+	animation_player.clear_queue()
 	black_animation.play("engulf")
 	await black_animation.animation_finished
+	black.visible = false
+	reload_scene()

@@ -429,7 +429,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ky7a"]
 _data = {
 &"RESET": SubResource("Animation_ok6qy"),
-&"expand": SubResource("Animation_q500l")
+&"engulf": SubResource("Animation_q500l")
 }
 
 [node name="actual_level" type="Node2D" unique_id=1811689780]
