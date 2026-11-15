@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="5_somlo"]
 [ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="6_du37t"]
 [ext_resource type="PackedScene" uid="uid://2syl0268270w" path="res://scenes/killzone.tscn" id="9_2y6tj"]
+[ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="10_4ky7a"]
 [ext_resource type="PackedScene" uid="uid://581awekhncm6" path="res://scenes/bridge.tscn" id="10_jlnn5"]
 [ext_resource type="Script" uid="uid://cglh7ycstukjq" path="res://scripts/killzone_actual_level.gd" id="10_qc5r4"]
 [ext_resource type="PackedScene" uid="uid://crk7ymuiv7gnt" path="res://scenes/bridge_middle.tscn" id="11_jlnn5"]
@@ -370,6 +371,7 @@ sources/0 = SubResource("TileSetAtlasSource_t7wha")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uexfq"]
 
 [sub_resource type="FontVariation" id="FontVariation_somlo"]
+base_font = ExtResource("10_4ky7a")
 spacing_top = 2
 
 [sub_resource type="Animation" id="Animation_ok6qy"]
@@ -609,7 +611,7 @@ offset_top = -108.0
 offset_right = 575.0
 offset_bottom = 356.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 5
 theme_override_fonts/normal_font = SubResource("FontVariation_somlo")
 text = "Lead Developer
 ROHAN BULMER
@@ -618,9 +620,8 @@ Story Writer
 HAMZA WALI
 
 Asset Designers
-[INSERT_ASSET_DESIGNERS]
-- Aske4
--
+Aske4
+CreativeKind
 
 Soundtrack Producers
 [INSERT_SOUNDTRACK_DESIGNERS]
