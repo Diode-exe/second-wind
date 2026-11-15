@@ -431,9 +431,6 @@ flip_v = true
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
-[node name="QuestionBox" parent="background_map" unique_id=167394789 instance=ExtResource("5_k2xgo")]
-position = Vector2(448, 84)
-
 [node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(206, 440)
@@ -473,6 +470,9 @@ position = Vector2(873, 395)
 
 [node name="QuestionBox5" parent="." unique_id=341108058 instance=ExtResource("5_k2xgo")]
 position = Vector2(770, 392)
+
+[node name="QuestionBox6" parent="." unique_id=167394789 instance=ExtResource("5_k2xgo")]
+position = Vector2(1024, 419)
 
 [node name="Killzone" parent="." unique_id=1943366044 instance=ExtResource("9_2y6tj")]
 position = Vector2(158, 577)
