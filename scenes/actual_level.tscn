@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ct0oimtwl5l3n" path="res://scenes/wing_with.tscn" id="1_5lqds"]
 [ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="2_t7wha"]
 [ext_resource type="Script" uid="uid://h8or8y8kj0br" path="res://scripts/wing_with.gd" id="2_ybgef"]
+[ext_resource type="PackedScene" uid="uid://bvhg1k4vjnmui" path="res://scenes/tower.tscn" id="5_4ky7a"]
 [ext_resource type="PackedScene" uid="uid://bjp10cw4qbobe" path="res://scenes/photon.tscn" id="5_du37t"]
 [ext_resource type="PackedScene" uid="uid://ccx6202wtybsk" path="res://scenes/question_box.tscn" id="5_k2xgo"]
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="5_somlo"]
@@ -542,6 +543,10 @@ scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="Tower" parent="background_map" unique_id=657300615 instance=ExtResource("5_4ky7a")]
+position = Vector2(1309, -71)
+scale = Vector2(0.25, 0.25)
 
 [node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
 z_index = 1
