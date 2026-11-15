@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="2_t7wha"]
 [ext_resource type="Script" uid="uid://h8or8y8kj0br" path="res://scripts/wing_with.gd" id="2_ybgef"]
 [ext_resource type="PackedScene" uid="uid://bjp10cw4qbobe" path="res://scenes/photon.tscn" id="5_du37t"]
+[ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="6_du37t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -381,19 +382,24 @@ tile_set = SubResource("TileSet_t7wha")
 [node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(206, 440)
+script = ExtResource("6_du37t")
 
 [node name="Photon2" parent="." unique_id=1067990098 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(443, 353)
+script = ExtResource("6_du37t")
 
 [node name="Photon3" parent="." unique_id=472631884 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(489, 391)
+script = ExtResource("6_du37t")
 
 [node name="Photon4" parent="." unique_id=219331162 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(302, 325)
+script = ExtResource("6_du37t")
 
 [node name="Photon5" parent="." unique_id=561738604 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(361, 455)
+script = ExtResource("6_du37t")

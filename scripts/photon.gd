@@ -1,5 +1,5 @@
 extends Area2D
-@onready var wing_with: CharacterBody2D = $"."
+@onready var wing_with: CharacterBody2D = $"../wing_with"
 
 
 func _on_body_entered(body: Node2D) -> void:
