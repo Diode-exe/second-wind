@@ -5,6 +5,9 @@
 [ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_usruo"]
 [ext_resource type="Texture2D" uid="uid://b6sa12c4qigsa" path="res://assets/sprites/feather.png" id="3_usruo"]
 
+[sub_resource type="FontVariation" id="FontVariation_ntvy5"]
+base_font = ExtResource("2_usruo")
+
 [sub_resource type="FontVariation" id="FontVariation_110l4"]
 base_font = ExtResource("2_usruo")
 
@@ -132,10 +135,13 @@ position_smoothing_enabled = true
 visible = false
 z_index = 4
 offset_left = -56.0
-offset_top = -92.0
-offset_right = 37.0
+offset_top = -93.0
+offset_right = 83.0
 offset_bottom = -61.0
-text = "Game Over"
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = SubResource("FontVariation_ntvy5")
+text = "GAME OVER"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D" unique_id=1658375975]
 texture_filter = 1
