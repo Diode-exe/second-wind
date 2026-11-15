@@ -470,3 +470,8 @@ position = Vector2(770, 392)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751177768]
 shape = SubResource("WorldBoundaryShape2D_c7ew2")
+
+[node name="credits" type="RichTextLabel" parent="." unique_id=880980675]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
