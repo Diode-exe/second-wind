@@ -54,7 +54,8 @@ func _physics_process(delta: float) -> void:
 		
 		if collider.name == "QuestionBox":
 			print("touched question box")
-			add_wing_health()
+			if collider.is_empty:
+				add_wing_health()
 	
 func add_wing_health():
 	if wing_health == null:
