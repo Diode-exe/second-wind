@@ -32,6 +32,9 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("space") and is_on_floor():
 		update_wings()
+		
+	if Input.is_action_just_pressed("reset"):
+		reload_scene()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -51,21 +54,28 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
+		var normal = collision.get_normal()
 		
 		if collider.scene_file_path == "res://scenes/question_box.tscn":
-			print("touched question box")
+			#print("touched question box")
 			if collider.has_meta("is_empty"):
 				if !collider.get_meta("is_empty"):
-					collider.set_meta("is_empty", true)
-					add_wing_health(true)
-					collider.swap_texture_to_empty()
+					if normal.y > 0.5:
+						collider.set_meta("is_empty", true)
+						add_wing_health(true)
+						collider.swap_texture_to_empty()
 				else:
-					print("empty box")
+					pass
+					#print("empty box")
 			else:
-				print("this box has no metadata")
+				pass
+				#print("this box has no metadata")
 					
 					
 	
+func reload_scene():
+	get_tree().reload_current_scene()
+#	
 func add_wing_health(random = false):
 	if wing_health == null:
 		wing_health = 10
