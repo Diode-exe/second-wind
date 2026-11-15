@@ -52,10 +52,19 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		
-		if collider.name == "QuestionBox":
+		if collider.scene_file_path == "res://scenes/question_box.tscn":
 			print("touched question box")
-			if collider.is_empty:
-				add_wing_health()
+			if collider.has_meta("is_empty"):
+				if !collider.get_meta("is_empty"):
+					collider.set_meta("is_empty", true)
+					add_wing_health()
+					collider.swap_texture_to_empty()
+				else:
+					print("empty box")
+			else:
+				print("this box has no metadata")
+					
+					
 	
 func add_wing_health():
 	if wing_health == null:
