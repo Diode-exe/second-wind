@@ -408,11 +408,14 @@ script = ExtResource("6_du37t")
 [node name="QuestionBox" parent="." unique_id=30156101 instance=ExtResource("5_k2xgo")]
 position = Vector2(185, 395)
 
-[node name="QuestionBox2" parent="." unique_id=2103296303 instance=ExtResource("5_k2xgo")]
-position = Vector2(317, 399)
+[node name="QuestionBox2" parent="." unique_id=167394789 instance=ExtResource("5_k2xgo")]
+position = Vector2(540, 353)
 
-[node name="QuestionBox3" parent="." unique_id=1643079173 instance=ExtResource("5_k2xgo")]
-position = Vector2(666, 357)
+[node name="QuestionBox3" parent="." unique_id=1229532539 instance=ExtResource("5_k2xgo")]
+position = Vector2(350, 374)
 
-[node name="QuestionBox4" parent="." unique_id=1687570436 instance=ExtResource("5_k2xgo")]
-position = Vector2(963, 358)
+[node name="QuestionBox4" parent="." unique_id=157980682 instance=ExtResource("5_k2xgo")]
+position = Vector2(873, 395)
+
+[node name="QuestionBox5" parent="." unique_id=341108058 instance=ExtResource("5_k2xgo")]
+position = Vector2(770, 392)
