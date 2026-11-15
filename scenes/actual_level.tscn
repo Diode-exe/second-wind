@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://dcia1qg7nnix3"]
 
 [ext_resource type="PackedScene" uid="uid://ct0oimtwl5l3n" path="res://scenes/wing_with.tscn" id="1_5lqds"]
+[ext_resource type="Script" uid="uid://cnrpmu068sd8r" path="res://scripts/coin.gd" id="1_jq17r"]
 [ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="2_t7wha"]
 [ext_resource type="Script" uid="uid://h8or8y8kj0br" path="res://scripts/wing_with.gd" id="2_ybgef"]
+[ext_resource type="PackedScene" uid="uid://bjp10cw4qbobe" path="res://scenes/photon.tscn" id="5_du37t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -358,6 +360,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t7wha")
 
 [node name="actual_level" type="Node2D" unique_id=1811689780]
+script = ExtResource("1_jq17r")
 
 [node name="wing_with" parent="." unique_id=78275759 instance=ExtResource("1_5lqds")]
 z_index = 1
@@ -374,3 +377,23 @@ tile_set = SubResource("TileSet_5lqds")
 [node name="walkable_map" type="TileMapLayer" parent="background_map" unique_id=898421701]
 tile_map_data = PackedByteArray("AADf/wcAAAAAAAAAAADg/wcAAAAAAAAAAADh/wcAAAAAAAAAAADi/wcAAAAAAAAAAADj/wcAAAAAAAAAAADk/wcAAAAAAAAAAADl/wcAAAAAAAAAAADm/wcAAAAAAAAAAADn/wcAAAAAAAAAAADo/wcAAAAAAAAAAADp/wcAAAAAAAAAAADq/wcAAAAAAAAAAADr/wcAAAAAAAAAAADs/wcAAAAAAAAAAADt/wcAAAAAAAAAAADu/wcAAAAAAAAAAADv/wcAAAAAAAAAAADw/wcAAAAAAAAAAADx/wcAAAAAAAAAAADf/wgAAAAAAAEAAADg/wgAAAAAAAEAAADh/wgAAAAAAAEAAADi/wgAAAAAAAEAAADj/wgAAAAAAAEAAADk/wgAAAAAAAEAAADl/wgAAAAAAAEAAADm/wgAAAAAAAEAAADn/wgAAAAAAAEAAADo/wgAAAAAAAEAAADp/wgAAAAAAAEAAADq/wgAAAAAAAEAAADr/wgAAAAAAAEAAADs/wgAAAAAAAEAAADt/wgAAAAAAAEAAADu/wgAAAAAAAEAAADv/wgAAAAAAAEAAADw/wgAAAAAAAEAAADx/wgAAAAAAAEAAADy/wgAAAAAAAEAAADz/wgAAAAAAAEAAADz/wcAAAAAAAEAAAD0/wcAAAAAAAEAAAD1/wcAAAAAAAEAAAD1/wYAAAAAAAEAAAD2/wYAAAAAAAEAAAD2/wUAAAAAAAEAAAD3/wUAAAAAAAEAAAD4/wUAAAAAAAEAAAD4/wQAAAAAAAEAAAD5/wQAAAAAAAEAAAD6/wQAAAAJAAEAAAD7/wQAAAAKAAEAAAD8/wQAAAALAAEAAAD9/wQAAAAJAAEAAAD+/wQAAAAKAAEAAAD//wQAAAALAAEAAAAAAAQAAAAJAAEAAAABAAQAAAAKAAEAAAACAAQAAAALAAEAAAADAAQAAAAAAAEAAAAEAAQAAAAAAAEAAAAEAAUAAAAAAAEAAAAFAAUAAAAAAAEAAAAGAAUAAAAAAAEAAAAGAAYAAAAAAAEAAAAHAAYAAAAAAAEAAAAHAAcAAAAAAAEAAAAIAAcAAAAAAAEAAAAJAAcAAAAAAAEAAAAJAAgAAAAAAAEAAAAKAAgAAAAAAAEAAAALAAgAAAAAAAEAAAAMAAgAAAAAAAEAAAANAAgAAAAAAAEAAAAOAAgAAAAAAAEAAAAPAAgAAAAAAAEAAAAQAAgAAAAAAAEAAAARAAgAAAAAAAEAAAASAAgAAAAAAAEAAAATAAgAAAAAAAEAAAAUAAgAAAAAAAEAAAAVAAgAAAAAAAEAAAAWAAgAAAAAAAEAAAAXAAgAAAAAAAEAAAAYAAgAAAAAAAEAAAAZAAgAAAAAAAEAAAAKAAcAAAAGAAAAAAALAAcAAAAGAAAAAAAMAAcAAAAGAAAAAAANAAcAAAAGAAAAAAAOAAcAAAAGAAAAAAAPAAcAAAAGAAAAAAAQAAcAAAAGAAAAAAARAAcAAAAGAAAAAAASAAcAAAAGAAAAAAATAAcAAAAGAAAAAAAUAAcAAAAGAAAAAAAVAAcAAAAGAAAAAAAWAAcAAAAGAAAAAAAXAAcAAAAGAAAAAAAYAAcAAAAGAAAAAAAZAAcAAAAGAAAAAAASAAYAAAAAAAUAAAASAAUAAAAAAAMAAAA=")
 tile_set = SubResource("TileSet_t7wha")
+
+[node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(206, 440)
+
+[node name="Photon2" parent="." unique_id=1067990098 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(443, 353)
+
+[node name="Photon3" parent="." unique_id=472631884 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(489, 391)
+
+[node name="Photon4" parent="." unique_id=219331162 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(302, 325)
+
+[node name="Photon5" parent="." unique_id=561738604 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(361, 455)

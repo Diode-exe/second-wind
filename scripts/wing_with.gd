@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	if Input.is_action_just_pressed("space") and is_on_floor():
-		wing_flap()
+		update_wings()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -47,7 +47,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-func wing_flap():
+func add_wing_health():
+	wing_health += 1
+	rich_text_label.clear()
+	rich_text_label.add_text("Wing health: ")
+	rich_text_label.append_text(str(wing_health))
+
+func update_wings():
 	wing_health -= 1
 	animation_player.play("flap")
 	animation_player.queue("RESET")
