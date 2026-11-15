@@ -7,10 +7,10 @@ extends CharacterBody2D
 @onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var JUMP_VELOCITY = -400.0
 
 var camera_zoom = Vector2(2, 2)
-@export var wing_health = 50
+@export var wing_health = 10
 @export var health_init = false
  
 func init_wing_health():
@@ -54,9 +54,14 @@ func add_wing_health():
 	rich_text_label.append_text(str(wing_health))
 
 func update_wings():
-	wing_health -= 1
-	animation_player.play("flap")
-	animation_player.queue("RESET")
-	rich_text_label.clear()
-	rich_text_label.add_text("Wing health: ")
-	rich_text_label.append_text(str(wing_health))
+	if wing_health > 1:
+		JUMP_VELOCITY = -400
+		wing_health -= 1
+		animation_player.play("flap")
+		animation_player.queue("RESET")
+		rich_text_label.clear()
+		rich_text_label.add_text("Wing health: ")
+		rich_text_label.append_text(str(wing_health))
+	else:
+		JUMP_VELOCITY = 0
+		

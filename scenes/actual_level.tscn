@@ -367,7 +367,7 @@ script = ExtResource("1_jq17r")
 z_index = 1
 position = Vector2(87, 451)
 script = ExtResource("2_ybgef")
-wing_health = 50
+wing_health = 10
 health_init = false
 
 [node name="background_map" type="TileMapLayer" parent="." unique_id=60088964]
