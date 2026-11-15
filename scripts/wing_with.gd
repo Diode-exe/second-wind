@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var camera_2d: Camera2D = $Camera2D
-@onready var wing_with: CharacterBody2D = $"."
+#@onready var wing_with: CharacterBody2D = $"."
 @onready var player: Sprite2D = $Player
 @onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 @onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
@@ -120,6 +120,7 @@ func update_wings(subtract = 1):
 	rich_text_label.append_text(str(wing_health))
 
 func engulf_black():
+	black.global_position = player.global_position
 	if engulfing:
 		return
 	engulfing = true
