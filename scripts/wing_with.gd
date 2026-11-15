@@ -55,12 +55,15 @@ func add_wing_health():
 	JUMP_VELOCITY = -400
 
 func update_wings():
-	if wing_health > 0:
-		JUMP_VELOCITY = -400
+	if wing_health >= 1:
 		wing_health -= 1
-		animation_player.play("flap")
-		animation_player.queue("RESET")
-	else:
+		if wing_health >= 1:
+			JUMP_VELOCITY = -400
+			animation_player.play("flap")
+			animation_player.queue("RESET")
+		else:
+			JUMP_VELOCITY = 0
+	elif wing_health <= 0:
 		JUMP_VELOCITY = 0
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
