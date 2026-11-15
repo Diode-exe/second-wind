@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ccx6202wtybsk" path="res://scenes/question_box.tscn" id="5_k2xgo"]
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="5_somlo"]
 [ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="6_du37t"]
+[ext_resource type="AudioStream" uid="uid://jyk2whbcfg2m" path="res://assets/sounds/coin.wav" id="8_a7j7d"]
 [ext_resource type="PackedScene" uid="uid://2syl0268270w" path="res://scenes/killzone.tscn" id="9_2y6tj"]
-[ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="10_4ky7a"]
 [ext_resource type="PackedScene" uid="uid://581awekhncm6" path="res://scenes/bridge.tscn" id="10_jlnn5"]
 [ext_resource type="Script" uid="uid://cglh7ycstukjq" path="res://scripts/killzone_actual_level.gd" id="10_qc5r4"]
 [ext_resource type="PackedScene" uid="uid://crk7ymuiv7gnt" path="res://scenes/bridge_middle.tscn" id="11_jlnn5"]
@@ -371,10 +371,6 @@ sources/0 = SubResource("TileSetAtlasSource_t7wha")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uexfq"]
 
-[sub_resource type="FontVariation" id="FontVariation_somlo"]
-base_font = ExtResource("10_4ky7a")
-spacing_top = 2
-
 [sub_resource type="Animation" id="Animation_ok6qy"]
 length = 0.001
 tracks/0/type = "value"
@@ -578,6 +574,10 @@ z_index = 1
 position = Vector2(1432, 408)
 script = ExtResource("6_du37t")
 
+[node name="CoinPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1085465934]
+position = Vector2(1432, 408)
+stream = ExtResource("8_a7j7d")
+
 [node name="QuestionBox" parent="." unique_id=30156101 instance=ExtResource("5_k2xgo")]
 position = Vector2(185, 395)
 
@@ -608,36 +608,6 @@ script = ExtResource("10_qc5r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=868985816]
 shape = SubResource("WorldBoundaryShape2D_uexfq")
-
-[node name="credits" type="RichTextLabel" parent="." unique_id=880980675]
-visible = false
-offset_left = 129.0
-offset_top = -108.0
-offset_right = 575.0
-offset_bottom = 356.0
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = SubResource("FontVariation_somlo")
-text = "Lead Developer
-ROHAN BULMER
-
-Story Writer
-HAMZA WALI
-
-Asset Designers
-Aske4
-CreativeKind
-
-Soundtrack Producers
-[INSERT_SOUNDTRACK_DESIGNERS]
-
-Sound Effects
-[INSERT_SOUNDEFFECT_DESIGNERS]
-
-Made for Hackclub Haven Winnipeg
-
-Thank you for playing!"
-horizontal_alignment = 1
 
 [node name="Bridge" parent="." unique_id=479938406 instance=ExtResource("10_jlnn5")]
 position = Vector2(504, 404)

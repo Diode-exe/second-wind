@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://kwf2h4250563"]
+
+[ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="1_6e1uj"]
+[ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_kq7ac"]
+[ext_resource type="Script" uid="uid://bfr3xx73mrych" path="res://scripts/credits.gd" id="3_jc7ji"]
+
+[sub_resource type="FontVariation" id="FontVariation_6e1uj"]
+base_font = ExtResource("1_kq7ac")
+spacing_top = 2
+
+[node name="End Screen" type="Node2D" unique_id=1325190167]
+
+[node name="backdrop" type="Sprite2D" parent="." unique_id=834337103]
+position = Vector2(128.99998, -118.999985)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop2" type="Sprite2D" parent="." unique_id=547456090]
+position = Vector2(1280.0001, -118.999985)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop3" type="Sprite2D" parent="." unique_id=1187113592]
+position = Vector2(-1021.0001, -118.999985)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop4" type="Sprite2D" parent="." unique_id=1332053926]
+position = Vector2(128.50023, 529.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop5" type="Sprite2D" parent="." unique_id=2082967586]
+position = Vector2(1279.5004, 529.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop6" type="Sprite2D" parent="." unique_id=310768173]
+position = Vector2(-1022.4999, 529.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop7" type="Sprite2D" parent="." unique_id=133312366]
+position = Vector2(128, -768)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop8" type="Sprite2D" parent="." unique_id=1122614528]
+position = Vector2(1280.0001, -768)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop9" type="Sprite2D" parent="." unique_id=1995088336]
+position = Vector2(-1021, -768)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop10" type="Sprite2D" parent="." unique_id=1435871501]
+position = Vector2(128.50024, 1178.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop11" type="Sprite2D" parent="." unique_id=735580178]
+position = Vector2(1279.5004, 1178.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop12" type="Sprite2D" parent="." unique_id=1505344886]
+position = Vector2(-1022.4999, 1178.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("1_6e1uj")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="credits" type="RichTextLabel" parent="." unique_id=1322630390]
+offset_left = -220.0
+offset_top = 298.0
+offset_right = 226.0
+offset_bottom = 762.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/normal_font = SubResource("FontVariation_6e1uj")
+text = "Lead Developer
+ROHAN BULMER
+
+Story Writer
+HAMZA WALI
+
+Asset Designers
+Aske4
+CreativeKind
+
+Soundtrack Producers
+[INSERT_SOUNDTRACK_DESIGNERS]
+
+Sound Effects
+Brackeys, Asbjørn Thirslund
+
+Made for Hack Club Haven Winnipeg
+
+Thank you for playing!"
+horizontal_alignment = 1
+script = ExtResource("3_jc7ji")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=750233971]
+zoom = Vector2(1.5, 1.5)
