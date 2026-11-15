@@ -4,11 +4,13 @@ extends CharacterBody2D
 @onready var wing_with: CharacterBody2D = $"."
 @onready var player: Sprite2D = $Player
 @onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
+@onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var camera_zoom = Vector2(2, 2)
+var wing_health = 50
 
 func _physics_process(delta: float) -> void:
 	camera_2d.zoom = camera_zoom
@@ -20,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_pressed("space"):
+	if Input.is_action_just_pressed("space") and is_on_floor():
 		wing_flap()
 
 	# Get the input direction and handle the movement/deceleration.
@@ -38,5 +40,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func wing_flap():
+	wing_health -= 1
 	animation_player.play("flap")
 	animation_player.queue("RESET")
+	rich_text_label.clear()
+	rich_text_label.add_text("Wing health: ")
+	rich_text_label.append_text(str(wing_health))

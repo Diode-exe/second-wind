@@ -121,7 +121,15 @@ collision_layer = 2
 script = ExtResource("1_c7trj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=933660122]
+position = Vector2(1, -1)
 position_smoothing_enabled = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D" unique_id=1658375975]
+offset_left = -77.0
+offset_top = -90.0
+offset_right = 85.0
+offset_bottom = -50.0
+text = "Wing health: "
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
 position = Vector2(1, -16)
