@@ -10,9 +10,17 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var camera_zoom = Vector2(2, 2)
-var wing_health = 50
+@export var wing_health = 50
+@export var health_init = false
+ 
+func init_wing_health():
+	rich_text_label.clear()
+	rich_text_label.add_text("Wing health: ")
+	rich_text_label.append_text(str(wing_health))
 
 func _physics_process(delta: float) -> void:
+	if !health_init:
+		init_wing_health()
 	camera_2d.zoom = camera_zoom
 	# Add the gravity.
 	if not is_on_floor():

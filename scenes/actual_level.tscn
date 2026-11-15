@@ -363,6 +363,8 @@ sources/0 = SubResource("TileSetAtlasSource_t7wha")
 z_index = 1
 position = Vector2(87, 451)
 script = ExtResource("2_ybgef")
+wing_health = 50
+health_init = false
 
 [node name="background_map" type="TileMapLayer" parent="." unique_id=60088964]
 position = Vector2(576, 335)
