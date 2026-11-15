@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("down_arrow") and is_on_floor():
 		drop_down_bridge()
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("space") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
