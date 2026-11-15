@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ch44fah0wxpnm" path="res://assets/sprites/vulture/frame_7_delay-0.06s.png" id="8_wq45w"]
 [ext_resource type="Texture2D" uid="uid://df0dihlacpieu" path="res://assets/sprites/vulture/frame_8_delay-0.06s.png" id="9_3lpwo"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok6qy"]
+size = Vector2(655, 525)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_0hvcy"]
 animations = [{
 "frames": [{
@@ -45,9 +48,14 @@ animations = [{
 "speed": 16.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=728212377]
+[node name="Vulture" type="CharacterBody2D" unique_id=728212377]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757807034]
+position = Vector2(16.5, 102.5)
+shape = SubResource("RectangleShape2D_ok6qy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=767169579]
 sprite_frames = SubResource("SpriteFrames_0hvcy")
+autoplay = "default"
+frame_progress = 0.97008055
+flip_h = true

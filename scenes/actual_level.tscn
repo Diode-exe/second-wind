@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://cglh7ycstukjq" path="res://scripts/killzone_actual_level.gd" id="10_qc5r4"]
 [ext_resource type="PackedScene" uid="uid://crk7ymuiv7gnt" path="res://scenes/bridge_middle.tscn" id="11_jlnn5"]
 [ext_resource type="Texture2D" uid="uid://corja5l7jhym8" path="res://assets/sprites/black.jpg" id="12_ok6qy"]
+[ext_resource type="PackedScene" uid="uid://by0f1v3xftuo1" path="res://scenes/vulture.tscn" id="13_q500l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -465,7 +466,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop3" type="Sprite2D" parent="background_map" unique_id=354522130]
-position = Vector2(-1152.0001, -9.999986)
+position = Vector2(-1152, -9.999986)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
@@ -495,6 +496,51 @@ flip_v = true
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
+[node name="backdrop7" type="Sprite2D" parent="background_map" unique_id=808938262]
+position = Vector2(-0.49975586, -660.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop8" type="Sprite2D" parent="background_map" unique_id=366449337]
+position = Vector2(1150.5004, -660.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop9" type="Sprite2D" parent="background_map" unique_id=1627036197]
+position = Vector2(-1151.4999, -660.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop10" type="Sprite2D" parent="background_map" unique_id=1393921902]
+position = Vector2(-0.49975586, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop11" type="Sprite2D" parent="background_map" unique_id=2055853131]
+position = Vector2(1150.5004, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop12" type="Sprite2D" parent="background_map" unique_id=596460601]
+position = Vector2(-1151.4999, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
 [node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(206, 440)
@@ -520,6 +566,11 @@ z_index = 1
 position = Vector2(360, 439)
 script = ExtResource("6_du37t")
 
+[node name="Photon6" parent="." unique_id=1342797911 instance=ExtResource("5_du37t")]
+z_index = 1
+position = Vector2(1432, 408)
+script = ExtResource("6_du37t")
+
 [node name="QuestionBox" parent="." unique_id=30156101 instance=ExtResource("5_k2xgo")]
 position = Vector2(185, 395)
 
@@ -537,6 +588,12 @@ position = Vector2(770, 392)
 
 [node name="QuestionBox6" parent="." unique_id=167394789 instance=ExtResource("5_k2xgo")]
 position = Vector2(1024, 419)
+
+[node name="QuestionBox7" parent="." unique_id=1075865390 instance=ExtResource("5_k2xgo")]
+position = Vector2(1390, 361)
+
+[node name="QuestionBox8" parent="." unique_id=751323578 instance=ExtResource("5_k2xgo")]
+position = Vector2(1607, 349)
 
 [node name="Killzone" parent="." unique_id=1943366044 instance=ExtResource("9_2y6tj")]
 position = Vector2(158, 577)
@@ -595,10 +652,10 @@ position = Vector2(1038, 467)
 position = Vector2(1100, 468)
 
 [node name="Bridge7" parent="." unique_id=1024938089 instance=ExtResource("10_jlnn5")]
-position = Vector2(1848, 288)
+position = Vector2(1848, 292)
 
 [node name="Bridge8" parent="." unique_id=2087273454 instance=ExtResource("10_jlnn5")]
-position = Vector2(1800, 288)
+position = Vector2(1800, 292)
 
 [node name="black" type="Sprite2D" parent="." unique_id=991880920]
 visible = false
@@ -615,3 +672,19 @@ offset_left = -78.87908
 offset_top = -77.38043
 offset_right = 43.600273
 offset_bottom = -6.4483643
+
+[node name="Vulture" parent="." unique_id=728212377 instance=ExtResource("13_q500l")]
+position = Vector2(1532, 349)
+scale = Vector2(0.085, 0.085)
+
+[node name="Vulture2" parent="." unique_id=1106780298 instance=ExtResource("13_q500l")]
+position = Vector2(1859, 336)
+scale = Vector2(0.085, 0.085)
+
+[node name="Vulture3" parent="." unique_id=983280394 instance=ExtResource("13_q500l")]
+position = Vector2(1082, 354)
+scale = Vector2(0.085, 0.085)
+
+[node name="Vulture4" parent="." unique_id=34666126 instance=ExtResource("13_q500l")]
+position = Vector2(612, 363.99997)
+scale = Vector2(0.085, 0.085)

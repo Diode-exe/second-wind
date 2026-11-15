@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			update_wings()
 		else:
-			update_wings(4)
+			update_wings(3)
 
 	if Input.is_action_just_pressed("reset"):
 		reload_scene()
