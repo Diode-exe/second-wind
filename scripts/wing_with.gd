@@ -54,8 +54,15 @@ func _physics_process(delta: float) -> void:
 		
 		if collider.name == "QuestionBox":
 			print("touched question box")
-			#if collider.is_empty:
-				#add_wing_health()
+			if collider.has_meta("is_empty"):
+				if !collider.get_meta("is_empty"):
+					print("Health +1!")
+					collider.set_meta("is_empty", true)
+					add_wing_health()
+			else:
+				print("this box has no metadata")
+					
+					
 	
 func add_wing_health():
 	if wing_health == null:
