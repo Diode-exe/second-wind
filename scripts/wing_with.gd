@@ -5,6 +5,8 @@ extends CharacterBody2D
 @onready var player: Sprite2D = $Player
 @onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 @onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
+@onready var black: Sprite2D = $"../black"
+@onready var black_animation: AnimationPlayer = $"../black/AnimationPlayer"
 
 const SPEED = 300.0
 var JUMP_VELOCITY = -400.0
@@ -44,7 +46,7 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left_arrow", "right_arrow")
 	if direction:
 		velocity.x = direction * SPEED
 		if direction < 0:
@@ -107,10 +109,17 @@ func update_wings(subtract = 1):
 				animation_player.queue("RESET")
 			else:
 				JUMP_VELOCITY = 0
+				engulf_black()
 		else:
 			wing_health = 0
 	elif wing_health <= 0:
 		JUMP_VELOCITY = 0
+		engulf_black()
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
 	rich_text_label.append_text(str(wing_health))
+
+func engulf_black():
+	black.visible = true
+	black_animation.play("engulf")
+	await black_animation.animation_finished

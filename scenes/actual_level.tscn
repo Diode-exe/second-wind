@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://581awekhncm6" path="res://scenes/bridge.tscn" id="10_jlnn5"]
 [ext_resource type="Script" uid="uid://cglh7ycstukjq" path="res://scripts/killzone_actual_level.gd" id="10_qc5r4"]
 [ext_resource type="PackedScene" uid="uid://crk7ymuiv7gnt" path="res://scenes/bridge_middle.tscn" id="11_jlnn5"]
+[ext_resource type="Texture2D" uid="uid://corja5l7jhym8" path="res://assets/sprites/black.jpg" id="12_ok6qy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -370,6 +371,67 @@ sources/0 = SubResource("TileSetAtlasSource_t7wha")
 [sub_resource type="FontVariation" id="FontVariation_somlo"]
 spacing_top = 2
 
+[sub_resource type="Animation" id="Animation_ok6qy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(553, 382)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03650446, 0.030235954)]
+}
+
+[sub_resource type="Animation" id="Animation_q500l"]
+resource_name = "expand"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(553, 382), Vector2(610, 389)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.03650446, 0.030235954), Vector2(3.0553095, 1.0855457)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ky7a"]
+_data = {
+&"RESET": SubResource("Animation_ok6qy"),
+&"expand": SubResource("Animation_q500l")
+}
+
 [node name="actual_level" type="Node2D" unique_id=1811689780]
 
 [node name="wing_with" parent="." unique_id=78275759 instance=ExtResource("1_5lqds")]
@@ -531,3 +593,13 @@ position = Vector2(1038, 467)
 
 [node name="Bridge6" parent="." unique_id=1682257604 instance=ExtResource("11_jlnn5")]
 position = Vector2(1100, 468)
+
+[node name="black" type="Sprite2D" parent="." unique_id=991880920]
+visible = false
+z_index = 3
+position = Vector2(553, 382)
+scale = Vector2(0.03650446, 0.030235954)
+texture = ExtResource("12_ok6qy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=1501257284]
+libraries/ = SubResource("AnimationLibrary_4ky7a")
