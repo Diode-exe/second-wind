@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://by0f1v3xftuo1"]
+
+[ext_resource type="Texture2D" uid="uid://3m1yopn50l0t" path="res://assets/sprites/vulture/frame_0_delay-0.06s.png" id="1_wuplh"]
+[ext_resource type="Texture2D" uid="uid://cgdib04ngbg01" path="res://assets/sprites/vulture/frame_1_delay-0.06s.png" id="2_v3wbi"]
+[ext_resource type="Texture2D" uid="uid://bb28kwo46v448" path="res://assets/sprites/vulture/frame_2_delay-0.06s.png" id="3_sxagd"]
+[ext_resource type="Texture2D" uid="uid://bo2xrbppgsekk" path="res://assets/sprites/vulture/frame_3_delay-0.06s.png" id="4_gq7r4"]
+[ext_resource type="Texture2D" uid="uid://dhsudkab5qekv" path="res://assets/sprites/vulture/frame_4_delay-0.06s.png" id="5_q5yfv"]
+[ext_resource type="Texture2D" uid="uid://b3vrbqiiciert" path="res://assets/sprites/vulture/frame_5_delay-0.06s.png" id="6_2rhy8"]
+[ext_resource type="Texture2D" uid="uid://bedsqda3eerqd" path="res://assets/sprites/vulture/frame_6_delay-0.06s.png" id="7_2n7be"]
+[ext_resource type="Texture2D" uid="uid://ch44fah0wxpnm" path="res://assets/sprites/vulture/frame_7_delay-0.06s.png" id="8_wq45w"]
+[ext_resource type="Texture2D" uid="uid://df0dihlacpieu" path="res://assets/sprites/vulture/frame_8_delay-0.06s.png" id="9_3lpwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hvcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wuplh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v3wbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sxagd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gq7r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q5yfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2rhy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2n7be")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wq45w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3lpwo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=728212377]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757807034]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=767169579]
+sprite_frames = SubResource("SpriteFrames_0hvcy")
+frame = 3
+frame_progress = 0.8290138
