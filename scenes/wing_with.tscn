@@ -129,6 +129,7 @@ position = Vector2(1, -1)
 position_smoothing_enabled = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D" unique_id=1658375975]
+texture_filter = 1
 offset_left = -74.0
 offset_top = -59.0
 offset_right = 88.0
