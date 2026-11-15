@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 @onready var bridge: StaticBody2D = $"../Bridges/Bridge"
 @onready var bridge_collider: CollisionShape2D = $"../Bridges/Bridge/CollisionShape2D"
-@onready var big_slime: Node2D = $"../Slimes/big_slime"
 @onready var big_slime_animation: AnimationPlayer = $"../Sprite2D/AnimationPlayer"
 @onready var left_wing_animation: AnimationPlayer = $"../wing_gain/Player/left_wing/AnimationPlayer"
 @onready var right_wing_animation: AnimationPlayer = $"../wing_gain/Player/right_wing/AnimationPlayer"

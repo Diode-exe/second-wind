@@ -2,9 +2,9 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 # this length of traversal, i dont like it 
-@onready var player_node: Node2D = $"../../../../Player"
+@onready var player_node: Node2D = $"/root/Game/Player"
 @onready var game: Node2D = $".."
-@onready var white: Sprite2D = $"../white"
+@onready var white: Sprite2D = $"/root/Game/white"
 #@onready var player: CharacterBody2D = get_tree().current_scene
 
 var has_wings = false
