@@ -106,6 +106,7 @@ func attach_wings():
 		
 		white.visible = true
 		white_animation.play("enlarge")
+		await white_animation.animation_finished
 		has_wings = true
 		
 		get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
