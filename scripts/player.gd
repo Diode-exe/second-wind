@@ -24,14 +24,14 @@ const JUMP_VELOCITY = -300.0
 
 var has_wings = false
 
-@export var wing_with_sprite_dupe = false
+var wing_with_sprite_dupe: Sprite2D
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-		
+
 
 	if Input.is_action_just_pressed("down_arrow") and is_on_floor():
 		drop_down_bridge()
@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 				wing_with_sprite_dupe.flip_h = true
 			else:
 				wing_with_sprite_dupe.flip_h = false
-			
+
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -89,24 +89,27 @@ func attach_wings():
 		await left_wing_animation.animation_finished
 		right_wing_animation.play("right_wing_attach")
 		await right_wing_animation.animation_finished
-		
+
 		wing_gain.visible = false
-	#	
+	#
 		player_sprite.queue_free()
-		
+
 		wing_with_sprite_dupe = wing_with_sprite.duplicate()
-		
+
+		has_wings = true
+
 		wing_with_sprite.queue_free()
-		
+
 		player.add_child(wing_with_sprite_dupe)
-#		
+
+		wing_with_sprite_dupe.flip_h = animated_sprite_2d.flip_h
+#
 		player.process_mode = Node.PROCESS_MODE_INHERIT
-		
+
 		player.visible = true
-		
+
 		white.visible = true
 		white_animation.play("enlarge")
 		await white_animation.animation_finished
-		has_wings = true
-		
+
 		get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
