@@ -47,6 +47,15 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+	# Loop through every collision from this frame
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if collider.name == "QuestionBox":
+			print("touched question box")
+			add_wing_health()
+	
 func add_wing_health():
 	if wing_health == null:
 		wing_health = 10
