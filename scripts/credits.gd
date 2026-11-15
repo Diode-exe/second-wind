@@ -2,9 +2,11 @@ extends RichTextLabel
 
 @export var move_distance: float = 500.0
 @export var duration: float = 15
+@onready var credits_music: AudioStreamPlayer2D = $"../CreditsMusic"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	credits_music.play()
 	# Create a tween that loops forever
 	var tween = create_tween().set_loops()
 	

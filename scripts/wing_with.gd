@@ -3,8 +3,9 @@ extends CharacterBody2D
 @onready var camera_2d: Camera2D = $Camera2D
 #@onready var wing_with: CharacterBody2D = $"."
 @onready var player: Sprite2D = $Player
-@onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
+@onready var game_over_label: RichTextLabel = $Camera2D/GameOverLabel
 @onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
+@onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 @onready var black: Sprite2D = $"../black"
 @onready var black_animation: AnimationPlayer = $"../black/AnimationPlayer"
 @onready var tower: CharacterBody2D = $"../Tower"
@@ -137,6 +138,8 @@ func engulf_black():
 		return
 	engulfing = true
 	black.visible = true
+	rich_text_label.visible = true
+	game_over_label.visible = true
 	animation_player.stop()
 	animation_player.clear_queue()
 	black_animation.play("engulf")

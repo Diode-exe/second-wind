@@ -128,6 +128,15 @@ script = ExtResource("1_c7trj")
 position = Vector2(1, -1)
 position_smoothing_enabled = true
 
+[node name="GameOverLabel" type="RichTextLabel" parent="Camera2D" unique_id=1250789842]
+visible = false
+z_index = 4
+offset_left = -56.0
+offset_top = -92.0
+offset_right = 37.0
+offset_bottom = -61.0
+text = "Game Over"
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D" unique_id=1658375975]
 texture_filter = 1
 offset_left = -74.0
