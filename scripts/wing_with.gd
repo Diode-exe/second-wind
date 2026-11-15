@@ -80,6 +80,8 @@ func _physics_process(delta: float) -> void:
 			else:
 				pass
 				#print("this box has no metadata")
+		elif collider.scene_file_path == "res://scenes/vulture.tscn":
+			engulf_black()
 
 func reload_scene():
 	get_tree().reload_current_scene()

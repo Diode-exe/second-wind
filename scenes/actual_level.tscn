@@ -646,7 +646,7 @@ position = Vector2(1128, 404)
 position = Vector2(600, 404)
 
 [node name="Bridge5" parent="." unique_id=1883627334 instance=ExtResource("11_jlnn5")]
-position = Vector2(1038, 467)
+position = Vector2(1024, 465)
 
 [node name="Bridge6" parent="." unique_id=1682257604 instance=ExtResource("11_jlnn5")]
 position = Vector2(1100, 468)
@@ -656,6 +656,9 @@ position = Vector2(1848, 292)
 
 [node name="Bridge8" parent="." unique_id=2087273454 instance=ExtResource("10_jlnn5")]
 position = Vector2(1800, 292)
+
+[node name="Bridge9" parent="." unique_id=910241411 instance=ExtResource("11_jlnn5")]
+position = Vector2(1061, 466)
 
 [node name="black" type="Sprite2D" parent="." unique_id=991880920]
 visible = false
