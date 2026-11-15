@@ -137,6 +137,7 @@ theme_override_colors/default_color = Color(0.79012597, 0.9570046, 0.9581974, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_110l4")
 theme_override_font_sizes/normal_font_size = 19
 text = "Wing health: "
+fit_content = true
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
 position = Vector2(1, -16)
