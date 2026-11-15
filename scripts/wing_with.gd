@@ -57,7 +57,7 @@ func _physics_process(delta: float) -> void:
 			if collider.has_meta("is_empty"):
 				if !collider.get_meta("is_empty"):
 					collider.set_meta("is_empty", true)
-					add_wing_health()
+					add_wing_health(true)
 					collider.swap_texture_to_empty()
 				else:
 					print("empty box")
@@ -66,10 +66,13 @@ func _physics_process(delta: float) -> void:
 					
 					
 	
-func add_wing_health():
+func add_wing_health(random = false):
 	if wing_health == null:
 		wing_health = 10
-	wing_health += 1
+	if random:
+		wing_health += randi_range(3, 5)
+	else:
+		wing_health += 1
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
 	rich_text_label.append_text(str(wing_health))
