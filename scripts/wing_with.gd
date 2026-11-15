@@ -10,7 +10,7 @@ const SPEED = 300.0
 var JUMP_VELOCITY = -400.0
 
 var camera_zoom = Vector2(2, 2)
-@export var wing_health = 10
+@export var wing_health = 10 
 @export var health_init = false
  
 func init_wing_health():
@@ -68,4 +68,3 @@ func update_wings():
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
 	rich_text_label.append_text(str(wing_health))
-		
