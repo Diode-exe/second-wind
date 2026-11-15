@@ -129,13 +129,13 @@ position = Vector2(1, -1)
 position_smoothing_enabled = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Camera2D" unique_id=1658375975]
-offset_left = -77.0
-offset_top = -90.0
-offset_right = 85.0
-offset_bottom = -50.0
+offset_left = -74.0
+offset_top = -59.0
+offset_right = 88.0
+offset_bottom = -43.0
 theme_override_colors/default_color = Color(0.79012597, 0.9570046, 0.9581974, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_110l4")
-theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/normal_font_size = 12
 text = "Wing health: "
 fit_content = true
 
