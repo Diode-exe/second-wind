@@ -1,13 +1,14 @@
 [gd_scene format=4 uid="uid://dcia1qg7nnix3"]
 
 [ext_resource type="PackedScene" uid="uid://ct0oimtwl5l3n" path="res://scenes/wing_with.tscn" id="1_5lqds"]
-[ext_resource type="Script" uid="uid://cnrpmu068sd8r" path="res://scripts/coin.gd" id="1_jq17r"]
 [ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="2_t7wha"]
 [ext_resource type="Script" uid="uid://h8or8y8kj0br" path="res://scripts/wing_with.gd" id="2_ybgef"]
 [ext_resource type="PackedScene" uid="uid://bjp10cw4qbobe" path="res://scenes/photon.tscn" id="5_du37t"]
 [ext_resource type="PackedScene" uid="uid://ccx6202wtybsk" path="res://scenes/question_box.tscn" id="5_k2xgo"]
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="5_somlo"]
 [ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="6_du37t"]
+[ext_resource type="PackedScene" uid="uid://2syl0268270w" path="res://scenes/killzone.tscn" id="9_2y6tj"]
+[ext_resource type="Script" uid="uid://cglh7ycstukjq" path="res://scripts/killzone_actual_level.gd" id="10_qc5r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -362,10 +363,9 @@ texture = ExtResource("2_t7wha")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_t7wha")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c7ew2"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uexfq"]
 
 [node name="actual_level" type="Node2D" unique_id=1811689780]
-script = ExtResource("1_jq17r")
 
 [node name="wing_with" parent="." unique_id=78275759 instance=ExtResource("1_5lqds")]
 z_index = 1
@@ -468,8 +468,12 @@ position = Vector2(873, 395)
 [node name="QuestionBox5" parent="." unique_id=341108058 instance=ExtResource("5_k2xgo")]
 position = Vector2(770, 392)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751177768]
-shape = SubResource("WorldBoundaryShape2D_c7ew2")
+[node name="Killzone" parent="." unique_id=1943366044 instance=ExtResource("9_2y6tj")]
+position = Vector2(158, 577)
+script = ExtResource("10_qc5r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=868985816]
+shape = SubResource("WorldBoundaryShape2D_uexfq")
 
 [node name="credits" type="RichTextLabel" parent="." unique_id=880980675]
 visible = false
