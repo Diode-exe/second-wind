@@ -26,6 +26,8 @@ var has_wings = false
 
 var wing_with_sprite_dupe: Sprite2D
 
+var attaching_wings = false
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -80,36 +82,40 @@ func _on_spawn_big_area_area_entered(area: Area2D) -> void:
 	big_slime_animation.play("move_down")
 
 func attach_wings():
-	if !has_wings:
-		wing_gain_sprite.global_position = animated_sprite_2d.global_position
-		player.visible = false
-		player.process_mode = Node.PROCESS_MODE_DISABLED
-		wing_gain.visible = true
-		left_wing_animation.play("left_wing_attach")
-		await left_wing_animation.animation_finished
-		right_wing_animation.play("right_wing_attach")
-		await right_wing_animation.animation_finished
+	if has_wings or attaching_wings:
+		return
+	attaching_wings = true
+	wing_gain_sprite.global_position = animated_sprite_2d.global_position
+	player.visible = false
+	player.process_mode = Node.PROCESS_MODE_DISABLED
+	wing_gain.visible = true
+	left_wing_animation.play("left_wing_attach")
+	await left_wing_animation.animation_finished
+	right_wing_animation.play("right_wing_attach")
+	await right_wing_animation.animation_finished
 
-		wing_gain.visible = false
-	#
-		player_sprite.queue_free()
+	wing_gain.visible = false
 
-		wing_with_sprite_dupe = wing_with_sprite.duplicate()
+	player_sprite.queue_free()
 
-		has_wings = true
+	wing_with_sprite_dupe = wing_with_sprite.duplicate()
 
-		wing_with_sprite.queue_free()
+	has_wings = true
 
-		player.add_child(wing_with_sprite_dupe)
+	wing_with_sprite.queue_free()
 
-		wing_with_sprite_dupe.flip_h = animated_sprite_2d.flip_h
+	player.add_child(wing_with_sprite_dupe)
+
+	# wing_with_sprite_dupe.flip_h = animated_sprite_2d.flip_h
 #
-		player.process_mode = Node.PROCESS_MODE_INHERIT
+	#player.process_mode = Node.PROCESS_MODE_INHERIT
 
-		player.visible = true
+	player.visible = true
 
-		white.visible = true
-		white_animation.play("enlarge")
-		await white_animation.animation_finished
+	white.visible = true
+	white_animation.play("enlarge")
+	await white_animation.animation_finished
+	
+	white.visible = false
 
-		get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
