@@ -48,6 +48,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func add_wing_health():
+	if wing_health == null:
+		wing_health = 10
 	wing_health += 1
 	rich_text_label.clear()
 	rich_text_label.add_text("Wing health: ")
@@ -55,6 +57,8 @@ func add_wing_health():
 	JUMP_VELOCITY = -400
 
 func update_wings():
+	if wing_health == null:
+		wing_health = 10
 	if wing_health >= 1:
 		wing_health -= 1
 		if wing_health >= 1:
