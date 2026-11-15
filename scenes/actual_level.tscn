@@ -403,7 +403,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_q500l"]
 resource_name = "expand"
-length = 2.0
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -411,10 +411,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.8),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(553, 382), Vector2(610, 389)]
+"values": [Vector2(553, 382), Vector2(982.5, 275)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -423,10 +423,10 @@ tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.8),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.03650446, 0.030235954), Vector2(3.0553095, 1.0855457)]
+"values": [Vector2(0.03650446, 0.030235954), Vector2(4.542035, 1.156342)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4ky7a"]
@@ -454,21 +454,21 @@ tile_map_data = PackedByteArray("AADf/wcAAAAAAAAAAADg/wcAAAAAAAAAAADh/wcAAAAAAAA
 tile_set = SubResource("TileSet_t7wha")
 
 [node name="backdrop" type="Sprite2D" parent="background_map" unique_id=1066695521]
-position = Vector2(-1.0000186, -9.999986)
+position = Vector2(-1.8656254e-05, -10.999986)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop2" type="Sprite2D" parent="background_map" unique_id=2027070031]
-position = Vector2(1150.0001, -9.999986)
+position = Vector2(1151.0001, -10.999986)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop3" type="Sprite2D" parent="background_map" unique_id=354522130]
-position = Vector2(-1152, -9.999986)
+position = Vector2(-1150.0001, -10.999986)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
@@ -499,7 +499,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop7" type="Sprite2D" parent="background_map" unique_id=808938262]
-position = Vector2(-0.49975586, -660.25)
+position = Vector2(-0.99999994, -660)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -507,7 +507,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop8" type="Sprite2D" parent="background_map" unique_id=366449337]
-position = Vector2(1150.5004, -660.25)
+position = Vector2(1151.0001, -660)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -515,7 +515,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop9" type="Sprite2D" parent="background_map" unique_id=1627036197]
-position = Vector2(-1151.4999, -660.25)
+position = Vector2(-1150, -660)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
