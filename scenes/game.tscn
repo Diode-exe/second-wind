@@ -258,6 +258,67 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uexfq"]
 size = Vector2(14.614422, 9.677418)
 
+[sub_resource type="Animation" id="Animation_dinhu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6.4494953, 2.2026143)]
+}
+
+[sub_resource type="Animation" id="Animation_kvpfn"]
+resource_name = "enlarge"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.5, 5), Vector2(3.5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.10606061, 0.1633987), Vector2(6.4494953, 2.2026143)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dinhu"]
+_data = {
+&"RESET": SubResource("Animation_dinhu"),
+&"enlarge": SubResource("Animation_kvpfn")
+}
+
 [node name="Game" type="Node2D" unique_id=790904685]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1095974637]
@@ -446,9 +507,12 @@ shape = SubResource("RectangleShape2D_uexfq")
 [node name="white" type="Sprite2D" parent="." unique_id=290261382]
 visible = false
 z_index = 3
-position = Vector2(371, -13.75)
-scale = Vector2(6.5353537, 2.271242)
+position = Vector2(3.5, 5)
+scale = Vector2(6.4494953, 2.2026143)
 texture = ExtResource("9_0tnpc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="white" unique_id=2070306029]
+libraries/ = SubResource("AnimationLibrary_dinhu")
 
 [node name="wing_gain" parent="." unique_id=1746863379 instance=ExtResource("10_vtaks")]
 visible = false

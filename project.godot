@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="second-wind"
-run/main_scene="uid://dcia1qg7nnix3"
+run/main_scene="uid://bhkgxpuhyo2js"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -12,6 +12,7 @@ extends CharacterBody2D
 @onready var killzone: Area2D = $"../Sprite2D/Killzone"
 @onready var player: CharacterBody2D = $"."
 @onready var player_sprite: AnimatedSprite2D = $"./AnimatedSprite2D"
+@onready var white_animation: AnimationPlayer = $"../white/AnimationPlayer"
 
 @onready var wing_gain: Node2D = $"../wing_gain"
 @onready var wing_gain_sprite: Sprite2D = $"../wing_gain/Player"
@@ -103,5 +104,8 @@ func attach_wings():
 		
 		player.visible = true
 		
-		#white.visible = true
+		white.visible = true
+		white_animation.play("enlarge")
 		has_wings = true
+		
+		get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
