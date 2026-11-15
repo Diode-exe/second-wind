@@ -27,14 +27,20 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		#velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_pressed("space") and is_on_floor():
-		update_wings()
-		
+	if Input.is_action_just_pressed("space"):
+		if is_on_floor():
+			update_wings()
+		else:
+			update_wings(4)
+	
 	if Input.is_action_just_pressed("reset"):
 		reload_scene()
+		
+	if Input.is_action_just_pressed("t_key"):
+		wing_health = 1000000
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -88,17 +94,21 @@ func add_wing_health(random = false):
 	rich_text_label.append_text(str(wing_health))
 	JUMP_VELOCITY = -400
 
-func update_wings():
+func update_wings(subtract = 1):
 	if wing_health == null:
 		wing_health = 10
 	if wing_health >= 1:
-		wing_health -= 1
-		if wing_health >= 1:
-			JUMP_VELOCITY = -400
-			animation_player.play("flap")
-			animation_player.queue("RESET")
+		if wing_health - subtract >= 1:
+			wing_health -= subtract
+			if wing_health >= 1:
+				JUMP_VELOCITY = -400
+				velocity.y = JUMP_VELOCITY
+				animation_player.play("flap")
+				animation_player.queue("RESET")
+			else:
+				JUMP_VELOCITY = 0
 		else:
-			JUMP_VELOCITY = 0
+			wing_health = 0
 	elif wing_health <= 0:
 		JUMP_VELOCITY = 0
 	rich_text_label.clear()
