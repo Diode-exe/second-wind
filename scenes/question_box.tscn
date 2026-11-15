@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ccx6202wtybsk"]
 
+[ext_resource type="Script" uid="uid://dwv431bgrpuqy" path="res://scripts/question_box.gd" id="1_33sf6"]
 [ext_resource type="Texture2D" uid="uid://dk5nvh8swymsl" path="res://assets/sprites/world_tileset.png" id="1_buhl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7ew2"]
@@ -7,6 +8,7 @@ size = Vector2(16, 16)
 
 [node name="QuestionBox" type="StaticBody2D" unique_id=167394789]
 collision_mask = 2
+script = ExtResource("1_33sf6")
 metadata/is_empty = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=940518313]
@@ -16,3 +18,9 @@ shape = SubResource("RectangleShape2D_c7ew2")
 texture = ExtResource("1_buhl5")
 region_enabled = true
 region_rect = Rect2(112, 33, 16, 15)
+
+[node name="empty_box_sprite" type="Sprite2D" parent="." unique_id=1563366626]
+visible = false
+texture = ExtResource("1_buhl5")
+region_enabled = true
+region_rect = Rect2(128, 17, 15, 15)

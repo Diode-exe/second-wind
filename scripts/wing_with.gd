@@ -56,9 +56,9 @@ func _physics_process(delta: float) -> void:
 			print("touched question box")
 			if collider.has_meta("is_empty"):
 				if !collider.get_meta("is_empty"):
-					print("Health +1!")
 					collider.set_meta("is_empty", true)
 					add_wing_health()
+					collider.swap_texture_to_empty()
 				else:
 					print("empty box")
 			else:
