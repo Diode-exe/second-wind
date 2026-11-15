@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://begr6nq1pcyme" path="res://scenes/wing_gain.gd" id="1_c7trj"]
 [ext_resource type="Texture2D" uid="uid://d2jlvm00w7wyi" path="res://assets/sprites/knight.png" id="2_a44mq"]
+[ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_usruo"]
 [ext_resource type="Texture2D" uid="uid://b6sa12c4qigsa" path="res://assets/sprites/feather.png" id="3_usruo"]
+
+[sub_resource type="FontVariation" id="FontVariation_110l4"]
+base_font = ExtResource("2_usruo")
 
 [sub_resource type="Animation" id="Animation_c7trj"]
 length = 0.001
@@ -129,6 +133,9 @@ offset_left = -77.0
 offset_top = -90.0
 offset_right = 85.0
 offset_bottom = -50.0
+theme_override_colors/default_color = Color(0.79012597, 0.9570046, 0.9581974, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_110l4")
+theme_override_font_sizes/normal_font_size = 19
 text = "Wing health: "
 
 [node name="Player" type="Sprite2D" parent="." unique_id=1339406699]
