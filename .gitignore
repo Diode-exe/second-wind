@@ -4,3 +4,5 @@
 *.tmp
 *.exe
 *.pck
+/builds
+/secondwind.app
