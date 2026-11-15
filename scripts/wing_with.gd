@@ -17,6 +17,7 @@ var camera_zoom = Vector2(2, 2)
 @export var health_init = false
 
 var engulfing = false
+var already_switching = false
 
 func init_wing_health():
 	rich_text_label.clear()
@@ -85,7 +86,12 @@ func _physics_process(delta: float) -> void:
 			engulf_black()
 			
 		elif collider.scene_file_path == "res://scenes/tower.tscn":
+			if already_switching:
+				return
+			already_switching = true
+			animation_player.stop()
 			tower.finish_game()
+			
 
 func reload_scene():
 	get_tree().reload_current_scene()
