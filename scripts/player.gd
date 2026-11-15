@@ -16,6 +16,7 @@ extends CharacterBody2D
 @onready var wing_gain: Node2D = $"../wing_gain"
 @onready var wing_gain_sprite: Sprite2D = $"../wing_gain/Player"
 @onready var wing_with_sprite: Sprite2D = $"../wing_with/Player"
+@onready var background_music: AudioStreamPlayer2D = $"../BackgroundMusic"
 
 
 const SPEED = 130.0
@@ -26,6 +27,7 @@ var has_wings = false
 var wing_with_sprite_dupe: Sprite2D
 
 var attaching_wings = false
+
 
 
 func _physics_process(delta: float) -> void:
@@ -120,3 +122,7 @@ func attach_wings():
 	white.visible = false
 
 	get_tree().change_scene_to_file("res://scenes/actual_level.tscn")
+
+
+func _on_ready() -> void:
+	background_music.play()

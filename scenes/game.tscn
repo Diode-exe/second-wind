@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://rtye4i1u2uwe" path="res://assets/sprites/white.png" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://c3hi6cqqpswoe" path="res://scenes/wing_gain.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://ct0oimtwl5l3n" path="res://scenes/wing_with.tscn" id="11_kvpfn"]
+[ext_resource type="AudioStream" uid="uid://deexw7pcsfyuk" path="res://assets/music/time_for_adventure.mp3" id="12_dinhu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -521,4 +522,8 @@ z_index = 5
 [node name="wing_with" parent="." unique_id=78275759 instance=ExtResource("11_kvpfn")]
 visible = false
 
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=727326908]
+stream = ExtResource("12_dinhu")
+
+[connection signal="ready" from="Player" to="Player" method="_on_ready"]
 [connection signal="area_entered" from="spawn_big_area" to="Player" method="_on_spawn_big_area_area_entered"]
