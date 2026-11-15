@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ccx6202wtybsk" path="res://scenes/question_box.tscn" id="5_k2xgo"]
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="5_somlo"]
 [ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="6_du37t"]
+[ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_2y6tj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -364,6 +365,10 @@ sources/0 = SubResource("TileSetAtlasSource_t7wha")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_c7ew2"]
 
+[sub_resource type="FontVariation" id="FontVariation_somlo"]
+base_font = ExtResource("9_2y6tj")
+spacing_top = 2
+
 [node name="actual_level" type="Node2D" unique_id=1811689780]
 script = ExtResource("1_jq17r")
 
@@ -472,6 +477,31 @@ position = Vector2(770, 392)
 shape = SubResource("WorldBoundaryShape2D_c7ew2")
 
 [node name="credits" type="RichTextLabel" parent="." unique_id=880980675]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 129.0
+offset_top = -108.0
+offset_right = 575.0
+offset_bottom = 356.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/normal_font = SubResource("FontVariation_somlo")
+text = "Lead Developer
+ROHAN BULMER
+
+Story Writer
+HAMZA WALI
+
+Asset Designers
+[INSERT_ASSET_DESIGNERS]
+- Aske4
+-
+
+Soundtrack Producers
+[INSERT_SOUNDTRACK_DESIGNERS]
+
+Sound Effects
+[INSERT_SOUNDEFFECT_DESIGNERS]
+
+Made for Hackclub Haven Winnipeg
+
+Thank you for playing!"
+horizontal_alignment = 1
