@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var wing_with: CharacterBody2D = $"."
 @onready var player: Sprite2D = $Player
+@onready var animation_player: AnimationPlayer = $Player/AnimationPlayer
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -18,6 +19,9 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_just_pressed("space"):
+		wing_flap()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -32,3 +36,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func wing_flap():
+	animation_player.play("flap")
+	animation_player.queue("RESET")
