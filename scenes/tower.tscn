@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bvhg1k4vjnmui"]
 
 [ext_resource type="Texture2D" uid="uid://dkovarpijb6ko" path="res://assets/sprites/HavenTower-Sprite.png" id="1_2x682"]
+[ext_resource type="Script" uid="uid://c8nst5k6de3yl" path="res://scripts/tower.gd" id="1_ay4al"]
 
 [node name="Tower" type="CharacterBody2D" unique_id=657300615]
+collision_mask = 2
+script = ExtResource("1_ay4al")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=30978773]
 texture = ExtResource("1_2x682")

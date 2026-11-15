@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://crk7ymuiv7gnt" path="res://scenes/bridge_middle.tscn" id="11_jlnn5"]
 [ext_resource type="Texture2D" uid="uid://corja5l7jhym8" path="res://assets/sprites/black.jpg" id="12_ok6qy"]
 [ext_resource type="PackedScene" uid="uid://by0f1v3xftuo1" path="res://scenes/vulture.tscn" id="13_q500l"]
+[ext_resource type="AudioStream" uid="uid://deexw7pcsfyuk" path="res://assets/music/time_for_adventure.mp3" id="16_f2800"]
+[ext_resource type="Script" uid="uid://dw4wsfk1rk2d6" path="res://scripts/background_music.gd" id="17_qce5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
 texture = ExtResource("2_t7wha")
@@ -540,10 +542,6 @@ texture = ExtResource("5_somlo")
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
-[node name="Tower" parent="background_map" unique_id=657300615 instance=ExtResource("5_4ky7a")]
-position = Vector2(1309, -71)
-scale = Vector2(0.25, 0.25)
-
 [node name="Photon" parent="." unique_id=740967919 instance=ExtResource("5_du37t")]
 z_index = 1
 position = Vector2(206, 440)
@@ -667,3 +665,11 @@ scale = Vector2(0.085, 0.085)
 [node name="Vulture4" parent="." unique_id=34666126 instance=ExtResource("13_q500l")]
 position = Vector2(612, 363.99997)
 scale = Vector2(0.085, 0.085)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="." unique_id=1085041273]
+stream = ExtResource("16_f2800")
+script = ExtResource("17_qce5a")
+
+[node name="Tower" parent="." unique_id=657300615 instance=ExtResource("5_4ky7a")]
+position = Vector2(1885, 264)
+scale = Vector2(0.25, 0.25)

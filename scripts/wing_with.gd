@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var rich_text_label: RichTextLabel = $Camera2D/RichTextLabel
 @onready var black: Sprite2D = $"../black"
 @onready var black_animation: AnimationPlayer = $"../black/AnimationPlayer"
+@onready var tower: CharacterBody2D = $"../Tower"
 
 const SPEED = 300.0
 var JUMP_VELOCITY = -400.0
@@ -82,6 +83,9 @@ func _physics_process(delta: float) -> void:
 				#print("this box has no metadata")
 		elif collider.scene_file_path == "res://scenes/vulture.tscn":
 			engulf_black()
+			
+		elif collider.scene_file_path == "res://scenes/tower.tscn":
+			tower.finish_game()
 
 func reload_scene():
 	get_tree().reload_current_scene()

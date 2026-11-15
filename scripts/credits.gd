@@ -10,12 +10,13 @@ func _ready() -> void:
 	
 	# Smooth out the start and end of each movement
 	tween.set_trans(Tween.TRANS_SINE)
-	tween.set_ease(Tween.EASE_IN_OUT)
+	
 	
 	# Move up (negative Y in 2D) then return to the starting Y position
 	var start_y = position.y
 	tween.tween_property(self, "position:y", start_y - move_distance, duration)
-	#tween.tween_property(self, "position:y", start_y, duration)
+	
+	tween.tween_property(self, "modulate:a", 0.0, 1.0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

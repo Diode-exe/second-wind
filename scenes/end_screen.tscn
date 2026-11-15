@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bogioqjqg1j6k" path="res://assets/sprites/SKYbackdrop.jpg" id="1_6e1uj"]
 [ext_resource type="FontFile" uid="uid://4s5qbv77gow8" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_kq7ac"]
 [ext_resource type="Script" uid="uid://bfr3xx73mrych" path="res://scripts/credits.gd" id="3_jc7ji"]
+[ext_resource type="AudioStream" uid="uid://deexw7pcsfyuk" path="res://assets/music/time_for_adventure.mp3" id="4_87vmq"]
 
 [sub_resource type="FontVariation" id="FontVariation_6e1uj"]
 base_font = ExtResource("1_kq7ac")
@@ -119,7 +120,7 @@ Aske4
 CreativeKind
 
 Soundtrack Producers
-[INSERT_SOUNDTRACK_DESIGNERS]
+Brackeys, Sofia Thirslund
 
 Sound Effects
 Brackeys, Asbjørn Thirslund
@@ -132,3 +133,6 @@ script = ExtResource("3_jc7ji")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=750233971]
 zoom = Vector2(1.5, 1.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1555395666]
+stream = ExtResource("4_87vmq")
