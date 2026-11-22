@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjp10cw4qbobe"]
 
-[ext_resource type="Script" uid="uid://cnrpmu068sd8r" path="res://scripts/coin.gd" id="1_35foj"]
+[ext_resource type="Script" uid="uid://s1h3x3iionvn" path="res://scripts/photon.gd" id="1_fgmui"]
 [ext_resource type="Texture2D" uid="uid://dmm4h03ub1b78" path="res://assets/sprites/coin.png" id="2_vv5lh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
@@ -100,7 +100,7 @@ radius = 5.0
 
 [node name="Photon" type="Area2D" unique_id=740967919]
 collision_mask = 2
-script = ExtResource("1_35foj")
+script = ExtResource("1_fgmui")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=738739793]
 sprite_frames = SubResource("SpriteFrames_c7ew2")

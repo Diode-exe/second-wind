@@ -48,7 +48,8 @@ func _physics_process(delta: float) -> void:
 		reload_scene()
 
 	if Input.is_action_just_pressed("t_key"):
-		wing_health = 1000000
+		if OS.is_debug_build():
+			wing_health = 1000000
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
