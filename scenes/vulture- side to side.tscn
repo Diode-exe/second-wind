@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://gdj20mbsg1cs"]
+
+[ext_resource type="Script" uid="uid://hjuimteobi21" path="res://scripts/vulture - side to side.gd" id="1_uptqi"]
+[ext_resource type="Texture2D" uid="uid://3m1yopn50l0t" path="res://assets/sprites/vulture/frame_0_delay-0.06s.png" id="2_vpr8x"]
+[ext_resource type="Texture2D" uid="uid://cgdib04ngbg01" path="res://assets/sprites/vulture/frame_1_delay-0.06s.png" id="3_1ovy4"]
+[ext_resource type="Texture2D" uid="uid://bb28kwo46v448" path="res://assets/sprites/vulture/frame_2_delay-0.06s.png" id="4_wkj1q"]
+[ext_resource type="Texture2D" uid="uid://bo2xrbppgsekk" path="res://assets/sprites/vulture/frame_3_delay-0.06s.png" id="5_bj3kw"]
+[ext_resource type="Texture2D" uid="uid://dhsudkab5qekv" path="res://assets/sprites/vulture/frame_4_delay-0.06s.png" id="6_tbsdc"]
+[ext_resource type="Texture2D" uid="uid://b3vrbqiiciert" path="res://assets/sprites/vulture/frame_5_delay-0.06s.png" id="7_dw6le"]
+[ext_resource type="Texture2D" uid="uid://bedsqda3eerqd" path="res://assets/sprites/vulture/frame_6_delay-0.06s.png" id="8_pb5mx"]
+[ext_resource type="Texture2D" uid="uid://ch44fah0wxpnm" path="res://assets/sprites/vulture/frame_7_delay-0.06s.png" id="9_o5yww"]
+[ext_resource type="Texture2D" uid="uid://df0dihlacpieu" path="res://assets/sprites/vulture/frame_8_delay-0.06s.png" id="10_43d21"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok6qy"]
+size = Vector2(655, 525)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hvcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vpr8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1ovy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wkj1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bj3kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tbsdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dw6le")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pb5mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o5yww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_43d21")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="Vulture - side to side" type="CharacterBody2D" unique_id=728212377]
+collision_mask = 2
+script = ExtResource("1_uptqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757807034]
+position = Vector2(16.5, 102.5)
+shape = SubResource("RectangleShape2D_ok6qy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=767169579]
+sprite_frames = SubResource("SpriteFrames_0hvcy")
+autoplay = "default"
+frame_progress = 0.31322098
+flip_h = true

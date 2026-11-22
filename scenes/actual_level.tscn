@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://corja5l7jhym8" path="res://assets/sprites/black.jpg" id="12_ok6qy"]
 [ext_resource type="PackedScene" uid="uid://by0f1v3xftuo1" path="res://scenes/vulture.tscn" id="13_q500l"]
 [ext_resource type="AudioStream" uid="uid://deexw7pcsfyuk" path="res://assets/music/time_for_adventure.mp3" id="16_f2800"]
+[ext_resource type="PackedScene" uid="uid://gdj20mbsg1cs" path="res://scenes/vulture- side to side.tscn" id="17_eaxvb"]
 [ext_resource type="Script" uid="uid://dw4wsfk1rk2d6" path="res://scripts/background_music.gd" id="17_qce5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybgef"]
@@ -497,7 +498,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop7" type="Sprite2D" parent="background_map" unique_id=808938262]
-position = Vector2(-0.99999994, -660)
+position = Vector2(0, -660)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -529,6 +530,36 @@ region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop11" type="Sprite2D" parent="background_map" unique_id=2055853131]
 position = Vector2(1150.5004, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop13" type="Sprite2D" parent="background_map" unique_id=1333953214]
+position = Vector2(2301.9998, -11.249986)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop14" type="Sprite2D" parent="background_map" unique_id=1727367145]
+position = Vector2(2301.5, 637.5)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop15" type="Sprite2D" parent="background_map" unique_id=811053859]
+position = Vector2(2301.9998, -660.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop16" type="Sprite2D" parent="background_map" unique_id=326049720]
+position = Vector2(2301.5, 1286.5)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
@@ -669,3 +700,7 @@ position = Vector2(2102, 400)
 
 [node name="Photon9" parent="." unique_id=858301438 instance=ExtResource("5_du37t")]
 position = Vector2(2139, 407)
+
+[node name="Vulture - side to side" parent="." unique_id=304498302 instance=ExtResource("17_eaxvb")]
+position = Vector2(2113, 364)
+scale = Vector2(0.085, 0.085)
