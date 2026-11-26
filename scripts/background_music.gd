@@ -1,5 +1,5 @@
-extends AudioStreamPlayer2D
-@onready var background_music: AudioStreamPlayer2D = $"."
+extends AudioStreamPlayer
+@onready var background_music: AudioStreamPlayer = $"."
 
 
 # Called when the node enters the scene tree for the first time.
