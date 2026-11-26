@@ -498,7 +498,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop7" type="Sprite2D" parent="background_map" unique_id=808938262]
-position = Vector2(0, -660)
+position = Vector2(-0.49999997, -659)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -506,7 +506,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop8" type="Sprite2D" parent="background_map" unique_id=366449337]
-position = Vector2(1151.0001, -660)
+position = Vector2(1150.5001, -659)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -514,7 +514,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop9" type="Sprite2D" parent="background_map" unique_id=1627036197]
-position = Vector2(-1150, -660)
+position = Vector2(-1150.5, -659)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -551,7 +551,7 @@ region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
 [node name="backdrop15" type="Sprite2D" parent="background_map" unique_id=811053859]
-position = Vector2(2301.9998, -660.25)
+position = Vector2(2301.4998, -659.25)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 flip_v = true
@@ -565,8 +565,94 @@ texture = ExtResource("5_somlo")
 region_enabled = true
 region_rect = Rect2(51, 122, 1702, 952)
 
+[node name="backdrop17" type="Sprite2D" parent="background_map" unique_id=237329246]
+position = Vector2(3452.9995, -11.249986)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop18" type="Sprite2D" parent="background_map" unique_id=843222992]
+position = Vector2(3452.5, 637.5)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop19" type="Sprite2D" parent="background_map" unique_id=697812331]
+position = Vector2(3452.9995, -660.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop20" type="Sprite2D" parent="background_map" unique_id=217501480]
+position = Vector2(3452.5, 1286.5)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
 [node name="backdrop12" type="Sprite2D" parent="background_map" unique_id=596460601]
 position = Vector2(-1151.4999, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop26" type="Sprite2D" parent="background_map" unique_id=1769461024]
+position = Vector2(1150.5004, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop27" type="Sprite2D" parent="background_map" unique_id=1767744035]
+position = Vector2(2301.5, 1286.5)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop29" type="Sprite2D" parent="background_map" unique_id=1029490687]
+position = Vector2(-1151.4999, 1286.75)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop24" type="Sprite2D" parent="background_map" unique_id=825683295]
+position = Vector2(3453.5, -1308.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop28" type="Sprite2D" parent="background_map" unique_id=2092053863]
+position = Vector2(0.50024414, -1308)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop30" type="Sprite2D" parent="background_map" unique_id=54533678]
+position = Vector2(1151.5004, -1308)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop31" type="Sprite2D" parent="background_map" unique_id=60206612]
+position = Vector2(2302.5, -1308.25)
+scale = Vector2(0.6762633, 0.68224794)
+texture = ExtResource("5_somlo")
+region_enabled = true
+region_rect = Rect2(51, 122, 1702, 952)
+
+[node name="backdrop32" type="Sprite2D" parent="background_map" unique_id=1105562518]
+position = Vector2(-1150.4999, -1308)
 scale = Vector2(0.6762633, 0.68224794)
 texture = ExtResource("5_somlo")
 region_enabled = true
