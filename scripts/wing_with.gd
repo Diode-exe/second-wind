@@ -47,8 +47,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
 		reload_scene()
 
-	if Input.is_action_just_pressed("t_key"):
-		if OS.is_debug_build():
+	if Input.is_action_just_pressed("t_key") and OS.is_debug_build():
 			wing_health = 1000000
 
 	# Get the input direction and handle the movement/deceleration.
